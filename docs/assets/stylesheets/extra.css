@@ -1,0 +1,59 @@
+/* 调整整个页面容器 */
+.md-grid {
+    max-width: 100%;
+    margin: 0;
+}
+
+/* 调整主要内容区域 */
+.md-main__inner {
+    margin: 0;
+    margin-left: 232px;  /* 与导航栏宽度相同 */
+    max-width: none;
+}
+
+/* 调整导航栏 */
+.md-sidebar {
+    left: 0;
+    margin: 0;
+    padding: 1rem;  /* 添加内边距 */
+    position: fixed;  /* 改为固定定位 */
+    width: 232px;    /* 设置固定宽度 */
+    display: block !important; /* 强制显示 */
+    visibility: visible !important; /* 确保可见 */
+    opacity: 1 !important;    /* 确保不透明 */
+}
+
+/* 头部区域样式 */
+.md-header {
+    background: transparent;
+    height: 80px;
+}
+
+/* logo样式 */
+.md-header__button.md-logo {
+    margin: 0;
+    padding: 0;
+}
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+    width: auto;
+    height: 70px;
+}
+/* 文字颜色设置 */
+.md-header__title,
+.md-header__button,
+.md-tabs__link,
+.md-header__source {
+    color: #000000 !important;
+}
+.md-header__button.md-icon {
+    color: #000000;
+}
+/* 标签栏样式 */
+.md-tabs {
+    background: transparent;
+    height: 48px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}

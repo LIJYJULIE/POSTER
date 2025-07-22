@@ -1,0 +1,37 @@
+# 网站信息
+site_name: ""
+site_author: Julie2025
+
+# 主题配置
+theme:
+  font: false
+  name: material
+  language: zh  # 将界面语言设置为中文
+
+  logo: assets/images/ACADE.png    # 设置导航栏 logo
+  favicon: assets/images/ACADE.png # 设置浏览器标签页图标
+  features:
+    # - navigation.tabs  # 移除顶部标签页导航
+    - navigation.sections      # 启用左侧导航的部分折叠
+    - navigation.expand        # 默认展开所有部分
+    - toc.integrate            # 将文章目录集成到左侧导航
+    - navigation.top           # 保留"返回顶部"按钮
+
+extra_css:
+  - assets/stylesheets/extra.css
+# 导航菜单配置
+nav:
+  - 'ACADE介绍': 'index.md'
+  - '高升力装置展示案例': 'results-hl.md'
+  - '叶轮机械展示案例': 'results-tb.md'
+
+# Markdown 扩展功能，让你的文档更强大
+markdown_extensions:
+  - admonition # 美观的提示框，如 note, warning
+  - pymdownx.superfences # 支持在代码块中嵌套代码块
+  - pymdownx.tabbed: # 支持内容选项卡
+      alternate_style: true
+
+plugins:
+  - search:
+      enabled: false
