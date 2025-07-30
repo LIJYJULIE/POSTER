@@ -334,10 +334,23 @@
 
 
 <h1 id="_1">叶轮机械展示案例</h1>
-<p>本页面展示了叶轮机械领域的一些经典案例的网格划分和仿真计算结果。</p>
+<p>在叶轮机械的设计与优化中，计算流体力学（CFD）仿真扮演着至关重要的角色，而网格划分作为CFD仿真的基础，其质量直接决定了模拟结果的准确性与可靠性。
+因此，为了全面验证和评估我们的网格划分工具在航空航天及涡轮机械领域的性能，同时考虑到数据的详细程度和开源情况，
+我们选择了Rotor37、Rotor67、T106A/C和VKI LS89作为核心测试案例。
+这些案例之所以被广泛采纳为行业内的标准基准，不仅因为它们涵盖了从跨声速压气机到低压涡轮叶栅及高压涡轮叶片的多种典型叶轮机械类型与复杂工况，
+更重要的是它们包含了激波、分离、转捩、叶尖泄漏流以及二次流等对网格质量提出严峻挑战的复杂流动现象。同时，这些案例都拥有来自NASA、VKI等权威机构详尽且公开的实验数据，
+为我们精确评估网格生成质量、验证CFD仿真结果提供了不可或缺的可靠依据。</p>
 <h2 id="t106a">T106A</h2>
 <p><strong>案例介绍：</strong> </p>
-<p><strong>数据源：</strong>Peter Stadtmüller, Leonhard Fottner, Andreas Fiala, EXPERIMENTAL AND NUMERICAL 
+<p>T106叶型是普惠（Pratt &amp; Whitney）PW2037发动机转子叶片中段剖面的代表性设计，该发动机曾是波音757飞机的可选动力装置。
+现代航空发动机设计趋势是减少低压涡轮的叶片数量以降低重量和制造成本。这意味着每个叶片需要承受更高的气动负荷，从而导致了T106这类“超高升力”叶型的开发，
+其特点是吸力面出现更高的速度峰值，随后伴随显著的扩散，这使得边界层分离和转捩现象更为突出。</p>
+<p>T106A和T106C都是经典的低压涡轮叶栅，分别代表轻载和重载工况（其中T106A实验中同时考虑了上下游尾迹的影响）。
+低压涡轮中的流动通常是低雷诺数、高攻角，并且经常伴随着层流分离和转捩现象。
+这两个叶栅的特点在于其吸力面容易发生流动分离和层流到湍流的转捩。精确捕捉这些现象需要高精度的网格来解析边界层，尤其是在分离和再附区域。</p>
+<p>众多实验室针对T106系列叶栅在不同工况下进行了详尽的实验测试，包括冯·卡门流体力学研究院（VKI）、慕尼黑联邦国防军大学、剑桥大学惠特尔实验室等。</p>
+<p><strong>数据源：
+</strong>Peter Stadtmüller, Leonhard Fottner, Andreas Fiala, EXPERIMENTAL AND NUMERICAL 
 INVESTIGATION OF WAKE-INDUCED TRANSITION ON A HIGHLY LOADED LP TURBINE AT LOW REYNOLDS NUMBERS, 
 ASME Turbo Expo 2000: Power for Land, Sea, and Air, 10.1115/2000-GT-0269</p>
 <p><strong>网格生成配置：</strong> 计算使用的Case_T106A.json如下
@@ -377,13 +390,7 @@ ASME Turbo Expo 2000: Power for Land, Sea, and Air, 10.1115/2000-GT-0269</p>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<strong>结果图：</strong></p>
-<figure>
-    <img src="../fig/t106a-mesh.png" alt="T106A网格" width="50%">
-    <figcaption>图1. T106A叶栅计算网格</figcaption>
-</figure>
-
-<p><strong>网格信息及计算配置：</strong></p>
+<strong>网格信息及计算配置：</strong></p>
 <table>
 <thead>
 <tr>
@@ -455,17 +462,12 @@ ASME Turbo Expo 2000: Power for Land, Sea, and Air, 10.1115/2000-GT-0269</p>
 </tr>
 </tbody>
 </table>
+<p>值得一提的是在T106A的众多实验与仿真数据的分析中均对入口金属角进行了不同程度的修正，这是由于在T106A稳态实验中，上游的尾迹发生器并未被拆下。
+而在T106C中没有该影响。</p>
+<p><strong>结果图：</strong></p>
 <figure>
-    <img src="../fig/t106a-pressure.png" alt="T106A压力分布" width="50%">
-    <figcaption>图1. T106A 50%高度截面压力云图</figcaption>
-</figure>
-<figure>
-    <img src="../fig/t106a-mach-2.png" alt="T106A马赫数分布" width="50%">
-    <figcaption>图1. T106A 50%高度马赫数等值线图</figcaption>
-</figure>
-<figure>
-    <img src="../fig/t106a-q.png" alt="T106Aq" width="50%">
-    <figcaption>图1. T106A Q准则等值面图（马赫数染色）</figcaption>
+    <img src="../fig/t106a-mesh.png" alt="T106A网格" width="50%">
+    <figcaption>图1. T106A叶栅计算网格</figcaption>
 </figure>
 <figure>
     <img src="../fig/T106A-ma-plt.png" alt="T106Amap" width="50%">
@@ -473,16 +475,9 @@ ASME Turbo Expo 2000: Power for Land, Sea, and Air, 10.1115/2000-GT-0269</p>
 </figure>
 
 <h2 id="t106c">T106C</h2>
-<p><strong>案例介绍：</strong> </p>
 <p><strong>数据源：</strong>Jan Michálek, Michelangelo Monaldi, Tony Arts, AERODYNAMIC PERFORMANCE OF A VERY HIGH LIFT LOW PRESSURE
 TURBINE AIRFOIL (T106C) AT LOW REYNOLDS AND HIGH MACH NUMBER WITH
 EFFECT OF FREE STREAM TURBULENCE INTENSITY, ASME Turbo Expo 2010: Power for Land, Sea and Air, 10.1115/GT2010-22884</p>
-<p><strong>结果图：</strong></p>
-<figure>
-    <img src="../fig/t106c-mesh.png" alt="T106C网格" width="50%">
-    <figcaption>图1. T106C叶栅计算网格</figcaption>
-</figure>
-
 <p><strong>网格信息及计算配置：</strong></p>
 <table>
 <thead>
@@ -555,17 +550,10 @@ EFFECT OF FREE STREAM TURBULENCE INTENSITY, ASME Turbo Expo 2010: Power for Land
 </tr>
 </tbody>
 </table>
+<p><strong>结果图：</strong></p>
 <figure>
-    <img src="../fig/t106c-pressure.png" alt="T106C压力分布" width="50%">
-    <figcaption>图1. T106C 50%高度截面压力云图</figcaption>
-</figure>
-<figure>
-    <img src="../fig/t106c-mach-2.png" alt="T106C马赫数分布" width="50%">
-    <figcaption>图1. T106C 50%高度马赫数等值线图</figcaption>
-</figure>
-<figure>
-    <img src="../fig/t106c-q.png" alt="T106Cq" width="50%">
-    <figcaption>图1. T106C Q准则等值面图（马赫数染色）</figcaption>
+    <img src="../fig/t106c-mesh.png" alt="T106C网格" width="50%">
+    <figcaption>图1. T106C叶栅计算网格</figcaption>
 </figure>
 <figure>
     <img src="../fig/T106C-ma-plt.png" alt="T106Cmap" width="50%">
@@ -574,14 +562,12 @@ EFFECT OF FREE STREAM TURBULENCE INTENSITY, ASME Turbo Expo 2010: Power for Land
 
 <h2 id="vki-ls89">VKI LS89</h2>
 <p><strong>案例介绍：</strong> </p>
+<p>LS89是比利时冯·卡门流体力学研究院（VKI）设计的高压涡轮导向叶片，以其高负荷特性而闻名。其流动通常是高速、高雷诺数，并伴有显著的二次流损失，
+是研究二次流（如马蹄涡、通道涡）和总压损失生成机制的典型案例。这些复杂的三维流动结构对网格的结构和局部加密策略提出了很高的要求，尤其是端壁区域的网格。
+同时在某些工况下，LS89也可能出现局部的激波，进一步增加了流场和网格的复杂性。
+VKI对LS89进行了详尽的实验测试，提供了高质量的性能和流场测量数据，是CFD验证的重要资源。</p>
 <p><strong>数据源：</strong> T. Arts, M. Lambert de Rouvroit, A.W. Rutherford, AERO-THERMAL INVESTIGATION OF A
 HIGHLY LOADED TRANSONIC LINEAR TURBINE GUlDE VANE CASCADE, van KARMAN INSTITUTE FOR FLUID DYNAMICS, Technical Note 174</p>
-<p><strong>结果图：</strong></p>
-<figure>
-    <img src="../fig/vki-mesh.png" alt="VKI网格" width="50%">
-    <figcaption>图1. VKI叶栅计算网格</figcaption>
-</figure>
-
 <p><strong>网格信息及计算配置：</strong></p>
 <table>
 <thead>
@@ -639,7 +625,7 @@ HIGHLY LOADED TRANSONIC LINEAR TURBINE GUlDE VANE CASCADE, van KARMAN INSTITUTE 
 </tr>
 <tr>
 <td style="text-align: center;">CFL</td>
-<td style="text-align: center;">20</td>
+<td style="text-align: center;">10</td>
 <td style="text-align: center;"></td>
 </tr>
 <tr>
@@ -654,39 +640,11 @@ HIGHLY LOADED TRANSONIC LINEAR TURBINE GUlDE VANE CASCADE, van KARMAN INSTITUTE 
 </tr>
 </tbody>
 </table>
-<div style="display: flex; justify-content: center; align-items: center;">
-    <figure style="margin: 0; flex: 1;">
-        <img src="../fig/vki2-p.png" alt="VKI2压力分布" width="100%">
-        <figcaption>图1. 工况MUR45: VKI 50%高度截面压力云图</figcaption>
-    </figure>
-    <figure style="margin: 0; flex: 1;">
-        <img src="../fig/vki1-p.png" alt="VKI1压力分布" width="100%">
-        <figcaption>图1. 工况MUR47: VKI 50%高度截面压力云图</figcaption>
-    </figure>
-</div>
-
-<div style="display: flex; justify-content: space-between; align-items: center;">
-    <figure style="margin: 1px; flex: 1;">
-        <img src="../fig/vki2-mach-2.png" alt="VKI2马赫数分布" width="100%">
-        <figcaption>图1. 工况MUR45: VKI 50%高度马赫数等值线图</figcaption>
-    </figure>
-    <figure style="margin: 1px; flex: 1;">
-        <img src="../fig/vki1-mach2.png" alt="VKI1马赫数分布" width="100%">
-        <figcaption>图1. 工况MUR47: VKI 50%高度马赫数等值线图</figcaption>
-    </figure>
-</div>
-
-<div style="display: flex; justify-content: space-between; align-items: center;">
-    <figure style="margin: 1px; flex: 1;">
-        <img src="../fig/vki2-q.png" alt="VKI2q" width="100%">
-        <figcaption>图1. 工况MUR45: VKI Q准则等值面图（马赫数染色）</figcaption>
-    </figure>
-    <figure style="margin: 1px; flex: 1;">
-        <img src="../fig/vki1-q.png" alt="VKI1q" width="100%">
-        <figcaption>图1. 工况MUR47: VKI Q准则等值面图（马赫数染色）</figcaption>
-    </figure>
-</div>
-
+<p><strong>结果图：</strong></p>
+<figure>
+    <img src="../fig/vki-mesh.png" alt="VKI网格" width="50%">
+    <figcaption>图1. VKI叶栅计算网格</figcaption>
+</figure>
 <div style="display: flex; justify-content: space-between; align-items: center;">
     <figure style="margin: 1px; flex: 1;">
         <img src="../fig/vki2-ma-plt.png" alt="VKI2map" width="100%">
@@ -699,22 +657,14 @@ HIGHLY LOADED TRANSONIC LINEAR TURBINE GUlDE VANE CASCADE, van KARMAN INSTITUTE 
 </div>
 
 <h2 id="rotor37">Rotor37</h2>
-<p><strong>案例介绍：</strong> </p>
+<p><strong>案例介绍：</strong></p>
+<p>Rotor37和Rotor67都是NASA设计和测试的经典跨声速轴流压气机转子，广泛用于研究高马赫数流动、激波与边界层相互作用、叶尖间隙流、以及近失速工况等复杂现象。</p>
+<p>Rotor67由NASA Glenn Research Center设计和建造，其设计目标是实现高效率和高压比，
+也是为了研究跨音速流在压气机叶片中的行为而专门设计的，旨在为更高效的航空发动机压气机设计提供基础。
+Rotor 37在其设计点和大部分工作范围内都存在跨音速流动，作为一个单级转子，Rotor 37能够产生相对较高的总压比，这对于压气机性能来说是一个重要的指标。</p>
 <p><strong>数据源：</strong>Lonnie Reid and Royce D. Moore, Design and Overall Performance
 of Four Highly Loaded, High-Speed Inlet Stages for an Advanced
 High-Pressure-Ratio Core Compressor, NASA Technical Paper 1337</p>
-<p><strong>结果图：</strong></p>
-<div style="display: flex; justify-content: space-between; align-items: center;">
-    <figure style="margin: 1px; flex: 1;">
-        <img src="../fig/rotor37-mesh-2.png" alt="Rotor37网格2" width="100%">
-        <figcaption>图1. Rotor37计算网格局部放大 </figcaption>
-    </figure>
-    <figure style="margin: 1px; flex: 1;">
-        <img src="../fig/rotor37-mesh.png" alt="Rotor37网格" width="100%">
-        <figcaption>图1. Rotor37计算网格 </figcaption>
-    </figure>
-</div>
-
 <p><strong>网格信息及计算配置：</strong></p>
 <table>
 <thead>
@@ -747,7 +697,7 @@ High-Pressure-Ratio Core Compressor, NASA Technical Paper 1337</p>
 </tr>
 <tr>
 <td style="text-align: center;">入口总温</td>
-<td style="text-align: center;">300</td>
+<td style="text-align: center;">288.15</td>
 <td style="text-align: center;">K</td>
 </tr>
 <tr>
@@ -757,7 +707,7 @@ High-Pressure-Ratio Core Compressor, NASA Technical Paper 1337</p>
 </tr>
 <tr>
 <td style="text-align: center;">出口静压</td>
-<td style="text-align: center;">93000</td>
+<td style="text-align: center;">113990.625</td>
 <td style="text-align: center;">Pa</td>
 </tr>
 <tr>
@@ -782,39 +732,31 @@ High-Pressure-Ratio Core Compressor, NASA Technical Paper 1337</p>
 </tr>
 </tbody>
 </table>
+<p><strong>结果图：</strong></p>
+<div style="display: flex; justify-content: space-between; align-items: center;">
+    <figure style="margin: 1px; flex: 1;">
+        <img src="../fig/rotor37-mesh-2.png" alt="Rotor37网格2" width="100%">
+        <figcaption>图1. Rotor37计算网格局部放大 </figcaption>
+    </figure>
+    <figure style="margin: 1px; flex: 1;">
+        <img src="../fig/rotor37-mesh.png" alt="Rotor37网格" width="100%">
+        <figcaption>图1. Rotor37计算网格 </figcaption>
+    </figure>
+</div>
 <figure>
-    <img src="../fig/rotor37-0.5-mach.png" alt="Rotor37马赫数分布" width="50%">
-    <figcaption>图1. Rotor37 50%高度马赫数等值线图</figcaption>
-</figure>
-<figure>
-    <img src="../fig/rotor37-pcontour.png" alt="Rotor37压力分布" width="50%">
-    <figcaption>图1. Rotor37 50%高度叶形表面静压曲线</figcaption>
-</figure>
-<figure>
-    <img src="../fig/rotor37-ptratio.png" alt="Rotor37ptr" width="50%">
-    <figcaption>图1. Rotor37 总压比/总温比延展向分布曲线</figcaption>
-</figure>
-<figure>
-    <img src="../fig/rotor37mass-pr.png" alt="Rotor37mass-pr" width="50%">
-    <figcaption>图1. Rotor37 质量流量-总压比曲线</figcaption>
+    <img src="../fig/rotor37-ptratio.png" alt="Rotor37总压总温比" width="50%">
+    <figcaption>图1. Rotor37 出口总压/总温比</figcaption>
 </figure>
 
 <h2 id="rotor67">Rotor67</h2>
 <p><strong>案例介绍：</strong> </p>
+<p>Rotor67是NASA Lewis 设计的一款两级风扇的第一级旋翼，其核心设计目标是显著提升风扇的整体性能和效率。它最引人注目的特点是采用了低展弦比，
+旨在消除传统涡轮机械风扇中为了抑制叶片振动和改善气动稳定性所需的中间叶片阻尼器，从而简化结构并减少气动损失。实验结果显示其设计压力比下实现了超越预期的效率，
+第一级转子的绝热效率达到0.906，比设计目标高出2个百分点。此外，优化的径向载荷分布也使得风扇在叶尖区域能更好地处理边界层缺陷，进一步提升了整体性能。
+Rotor67由 22 片多圆弧叶片组成，设计为轴向进气，不需要进气导向叶片。
+M. J. Pierzga等人针对该设计方案在接近峰值效率和接近失速的操作条件下获取了激光测速仪和空气动力学性能数据，可用于仿真计算对比分析。</p>
 <p><strong>数据源：</strong>M. J. Pierzga, J.R.Wood, Investigation of the Three-
 Dimensional Flow Field Within a Transonic Fan Rotor: Experiment and Analysis, NASA Technical Memorandum 83739</p>
-<p><strong>结果图：</strong></p>
-<div style="display: flex; justify-content: space-between; align-items: center;">
-    <figure style="margin: 1px; flex: 1;">
-        <img src="../fig/rotor67-mesh-2.png" alt="Rotor67网格2" width="100%">
-        <figcaption>图1. Rotor67计算网格局部放大 </figcaption>
-    </figure>
-    <figure style="margin: 1px; flex: 1;">
-        <img src="../fig/rotor67-mesh.png" alt="Rotor67网格" width="100%">
-        <figcaption>图1. Rotor67计算网格 </figcaption>
-    </figure>
-</div>
-
 <p><strong>网格信息及计算配置：</strong></p>
 <table>
 <thead>
@@ -852,12 +794,12 @@ Dimensional Flow Field Within a Transonic Fan Rotor: Experiment and Analysis, NA
 </tr>
 <tr>
 <td style="text-align: center;">入口总压</td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">101325</td>
 <td style="text-align: center;">Pa</td>
 </tr>
 <tr>
 <td style="text-align: center;">出口静压</td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">120000</td>
 <td style="text-align: center;">Pa</td>
 </tr>
 <tr>
@@ -882,21 +824,27 @@ Dimensional Flow Field Within a Transonic Fan Rotor: Experiment and Analysis, NA
 </tr>
 </tbody>
 </table>
+<p><strong>结果图：</strong></p>
+<div style="display: flex; justify-content: space-between; align-items: center;">
+    <figure style="margin: 1px; flex: 1;">
+        <img src="../fig/rotor67-mesh-2.png" alt="Rotor67网格2" width="100%">
+        <figcaption>图1. Rotor67计算网格局部放大 </figcaption>
+    </figure>
+    <figure style="margin: 1px; flex: 1;">
+        <img src="../fig/rotor67-mesh.png" alt="Rotor67网格" width="100%">
+        <figcaption>图1. Rotor67计算网格 </figcaption>
+    </figure>
+</div>
 <figure>
-    <img src="../fig/rotor67-pressure.png" alt="Rotor67压力分布" width="50%">
-    <figcaption>图1. Rotor67 50%高度截面压力云图</figcaption>
-</figure>
-<figure>
-    <img src="../fig/rotor67-mach-2.png" alt="Rotor67马赫数分布" width="50%">
+    <img src="../fig/rotor67-ma.png" alt="Rotor67马赫数分布" width="100%">
     <figcaption>图1. Rotor67 50%高度马赫数等值线图</figcaption>
-</figure>
-<figure>
-    <img src="../fig/rotor67-q.png" alt="Rotor67Aq" width="50%">
-    <figcaption>图1. Rotor67 Q准则等值面图（马赫数染色）</figcaption>
 </figure>
 
 <h2 id="naca0015">NACA0015</h2>
 <p><strong>案例介绍：</strong></p>
+<p>NACA0015 是一个完美的对称翼型，其最大厚度是弦长的 15%。
+尽管它是一个非常基础的翼型，在某些应用中，特别是在需要正反向产生升力的场合，如直升机旋翼的变桨叶片，对称翼型可能是合适的选择。
+同时，由于需要在大攻角下保持控制能力且通常不需要在零攻角下产生升力，NACA0015 或其变体常用于飞机的垂直尾翼和水平尾翼（平直翼型）。</p>
 <p><strong>网格展示：</strong></p>
 <figure>
     <img src="../fig/naca0015-mesh.png" alt="ACA0015网格" width="50%">
@@ -937,6 +885,9 @@ Dimensional Flow Field Within a Transonic Fan Rotor: Experiment and Analysis, NA
 </table>
 <h2 id="n4412">N4412</h2>
 <p><strong>案例介绍：</strong></p>
+<p>N4412同样是一款非常常见的NACA四位数系列翼型，有弯度，这意味着它在零攻角下就能产生升力，
+是许多小型通用航空飞机机翼的首选翼型之一，因为它在低速下能提供足够的升力，同时兼顾了结构和制造的简易性。
+在设计中低速无人机时，N4412或其变体也常被考虑，以实现较好的升阻比。</p>
 <p><strong>网格展示：</strong></p>
 <figure>
     <img src="../fig/n4412-mesh.png" alt="N4412网格" width="50%">
