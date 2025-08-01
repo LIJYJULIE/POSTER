@@ -330,6 +330,22 @@ CRM翼身组合体（展现复杂翼身干扰及高雷诺数巡航模拟）、65
 以及为了精确捕捉这些复杂现象所需的精细网格和先进数值方法所带来的巨大计算成本，这些都使得Onera M6成为验证网格自适应和高效算法的理想案例。</p>
 <p><strong>数据源：</strong>Schmitt, V. and F. Charpin, "Pressure Distributions on the ONERA-M6-Wing at Transonic Mach Numbers," 
 Experimental Data Base for Computer Program Assessment. Report of the Fluid Dynamics Panel Working Group 04, AGARD AR 138, May 1979.</p>
+<p><strong>结果图：</strong></p>
+<figure>
+    <img src="../fig/M6_org.png" alt="M6_org" width="100%">
+    <figcaption>图1. M6原始几何网格</figcaption>
+</figure>
+<div style="display: flex; justify-content: space-between; align-items: center;">
+    <figure style="margin: 1px; flex: 1;">
+        <img src="../fig/M6_org-zoom1.png" alt="M6_org-zoom1" width="100%">
+        <figcaption>图1. M6边界层生成结果（局部1）</figcaption>
+    </figure>
+    <figure style="margin: 1px; flex: 1;">
+        <img src="../fig/M6_org-zoom2.png" alt="M6_org-zoom2" width="100%">
+        <figcaption>图1. M6边界层生成结果（局部2）</figcaption>
+    </figure>
+</div>
+
 <h2 id="crm">CRM</h2>
 <p><strong>案例介绍：</strong> </p>
 <p>CRM，全称 Common Research Model (通用研究模型)，是由美国国家航空航天局（NASA）主导设计的一个现代跨音速宽体客机模型，其设计目标是为航空工业和学术界提供一个开放、
@@ -344,6 +360,54 @@ Experimental Data Base for Computer Program Assessment. Report of the Fluid Dyna
 这些都需要高精度的数值格式、合适的湍流模型以及足够的网格分辨率才能准确模拟。湍流模型的选择和验证对于CRM的模拟至关重要，
 不同的RANS模型在预测激波、分离和尾迹方面可能表现出显著差异。</p>
 <p><strong>数据源：</strong></p>
+<p><strong>结果图：</strong></p>
+<figure>
+    <img src="../fig/CRM1_org.png" alt="CRM1_org" width="100%">
+    <figcaption>图1. CRM-case1原始几何网格</figcaption>
+</figure>
+<div style="display: flex; justify-content: space-between; align-items: center;">
+    <figure style="margin: 1px; flex: 1;">
+        <img src="../fig/CRM1_org_zoom1.png" alt="CRM1_org-zoom1" width="100%">
+        <figcaption>图1. CRM1边界层生成结果（局部1）</figcaption>
+    </figure>
+    <figure style="margin: 1px; flex: 1;">
+        <img src="../fig/CRM1_org_zoom2.png" alt="CRM1_org-zoom2" width="100%">
+        <figcaption>图1. CRM1边界层生成结果（局部2）</figcaption>
+    </figure>
+</div>
+<figure>
+    <img src="../fig/CRM2_org.png" alt="CRM2_org" width="100%">
+    <figcaption>图1. CRM-case2原始几何网格</figcaption>
+</figure>
+<div style="display: flex; justify-content: space-between; align-items: center;">
+    <figure style="margin: 1px; flex: 1;">
+        <img src="../fig/CRM2_org_zoom1.png" alt="CRM2_org-zoom1" width="100%">
+        <figcaption>图1. CRM2边界层生成结果（局部1）</figcaption>
+    </figure>
+    <figure style="margin: 1px; flex: 1;">
+        <img src="../fig/CRM1_org_zoom2.png" alt="CRM2_org-zoom2" width="100%">
+        <figcaption>图1. CRM2边界层生成结果（局部2）</figcaption>
+    </figure>
+</div>
+<figure>
+    <img src="../fig/CRM3_org.png" alt="CRM3_org" width="100%">
+    <figcaption>图1. CRM-case3原始几何网格</figcaption>
+</figure>
+<div style="display: flex; justify-content: space-between; align-items: center;">
+    <figure style="margin: 1px; flex: 1;">
+        <img src="../fig/CRM3_org_zoom1.png" alt="CRM3_org-zoom3" width="100%">
+        <figcaption>图1. CRM3边界层生成结果（局部1）</figcaption>
+    </figure>
+    <figure style="margin: 1px; flex: 1;">
+        <img src="../fig/CRM3_org_zoom2.png" alt="CRM3_org-zoom2" width="100%">
+        <figcaption>图1. CRM3边界层生成结果（局部2）</figcaption>
+    </figure>
+</div>
+<figure>
+    <img src="../fig/CRM3-ADPAT.png" alt="CRM3-ADPAT" width="100%">
+    <figcaption>图1. CRM-case3自适应网格（马赫数着色）</figcaption>
+</figure>
+
 <h2 id="dlr-f11">DLR F11</h2>
 <p><strong>案例介绍：</strong> </p>
 <p>DLR F11 模型由德国宇航中心（DLR）设计，是一个典型的双涵道支线客机配置模型，旨在为民用航空器的气动弹性设计、
@@ -354,6 +418,22 @@ Experimental Data Base for Computer Program Assessment. Report of the Fluid Dyna
 <p>与主要由美国国家航空航天局（NASA）设计、更侧重于现代宽体客机高速巡航条件下气动效率和流动机理的CRM（Common Research Model）模型相比，
 DLR F11 更侧重于欧洲航空工业的需求，代表了支线客机构型，并且在设计和研究方向上更强调气动弹性耦合特性、气动噪声以及与发动机短舱的相互作用。</p>
 <p><strong>数据源：</strong></p>
+<p><strong>结果图：</strong></p>
+<figure>
+    <img src="../fig/DLR_org.png" alt="DLR_org" width="100%">
+    <figcaption>图1. DLR原始几何网格</figcaption>
+</figure>
+<div style="display: flex; justify-content: space-between; align-items: center;">
+    <figure style="margin: 1px; flex: 1;">
+        <img src="../fig/DLR_org-zoom1.png" alt="DLR_org-zoom1" width="100%">
+        <figcaption>图1. DLR边界层生成结果（局部1）</figcaption>
+    </figure>
+    <figure style="margin: 1px; flex: 1;">
+        <img src="../fig/DLR_org-zoom2.png" alt="DLR_org-zoom2" width="100%">
+        <figcaption>图1. DLR边界层生成结果（局部2）</figcaption>
+    </figure>
+</div>
+
 <h2 id="65deltawing">65°DeltaWing</h2>
 <p><strong>案例介绍：</strong> </p>
 <p>65° Delta Wing（65度三角翼）是航空领域长期研究低展弦比三角翼构型在高攻角气动现象、涡流特性及非线性气动力方面的通用基准模型，
@@ -366,6 +446,21 @@ DLR F11 更侧重于欧洲航空工业的需求，代表了支线客机构型，
 <p>尽管几何结构简单，但65° Delta Wing的仿真计算仍面临显著挑战，包括准确捕捉高度非线性、三维的复杂涡流（特别是涡核破裂现象）、
 湍流模型的选择限制、精细网格生成以适应涡流运动和前缘几何、以及高攻角下强非线性导致的数值收敛性和稳定性问题。</p>
 <p><strong>数据源：</strong></p>
+<p><strong>结果图：</strong></p>
+<figure>
+    <img src="../fig/VFE2_org.png" alt="VFE2_org" width="100%">
+    <figcaption>图1. VFE2原始几何网格</figcaption>
+</figure>
+<div style="display: flex; justify-content: space-between; align-items: center;">
+    <figure style="margin: 1px; flex: 1;">
+        <img src="../fig/VFE2_org_zoom1.png" alt="VFE2_org-zoom1" width="100%">
+        <figcaption>图1. VFE2边界层生成结果（局部1）</figcaption>
+    </figure>
+    <figure style="margin: 1px; flex: 1;">
+        <img src="../fig/VFE2_org-zoom2.png" alt="VFE2_org-zoom2" width="100%">
+        <figcaption>图1. VFE2边界层生成结果（局部2）</figcaption>
+    </figure>
+</div>
 
 
 
