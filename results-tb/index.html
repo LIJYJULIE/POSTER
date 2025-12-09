@@ -360,33 +360,43 @@ ASME Turbo Expo 2000: Power for Land, Sea, and Air, 10.1115/2000-GT-0269</p>
 <span class="w">        </span><span class="nt">&quot;cor_fac&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="c1">//O型以外网格整体加粗倍数</span>
 <span class="w">        </span><span class="nt">&quot;refine_fac&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="c1">//网格整体加密倍数</span>
 <span class="w">        </span><span class="nt">&quot;flip&quot;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="c1">//坐标变换</span>
-<span class="w">        </span><span class="nt">&quot;limit&quot;</span><span class="p">:[</span><span class="mf">10.0</span><span class="p">,</span><span class="w"> </span><span class="mf">10.0</span><span class="p">,</span><span class="w"> </span><span class="mf">400.0</span><span class="p">]</span><span class="c1">//y+，z+，纵横比阈值</span>
+<span class="w">        </span><span class="nt">&quot;ywall&quot;</span><span class="p">:</span><span class="mf">1.0e-5</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;zwall&quot;</span><span class="p">:</span><span class="mf">1.0e-4</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;aspect_ratio&quot;</span><span class="p">:</span><span class="mf">800.0</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;outlet_refine&quot;</span><span class="p">:</span><span class="kc">false</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="nt">&quot;geometry&quot;</span><span class="p">:</span><span class="s2">&quot;blade&quot;</span><span class="p">,</span><span class="c1">//叶片类型，blade或wing</span>
 <span class="w">        </span><span class="nt">&quot;nblock&quot;</span><span class="p">:</span><span class="mi">12</span><span class="p">,</span><span class="c1">//网格块数量</span>
 <span class="w">        </span><span class="nt">&quot;dimension&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">],</span><span class="c1">//生成2D/3D网格</span>
-<span class="w">        </span><span class="nt">&quot;ext_block&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="kc">false</span><span class="p">,</span><span class="kc">false</span><span class="p">],</span><span class="c1">//生成上游/下游延长段网格</span>
 <span class="w">        </span><span class="nt">&quot;use_ext&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="c1">//是否进行HUB网格边界分割</span>
 <span class="w">        </span><span class="nt">&quot;doe&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="c1">//是否DOE批量生成网格</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="nt">&quot;gerl&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;use_mode&quot;</span><span class="p">:</span><span class="s2">&quot;relative&quot;</span><span class="p">,</span><span class="c1">//使用绝对坐标或根据xchord归一化</span>
 <span class="w">        </span><span class="nt">&quot;pDlead&quot;</span><span class="p">:</span><span class="mf">1.5</span><span class="p">,</span><span class="c1">//入口到前缘距离系数（如1.5则延长距离为1.5*叶片弦长投影长度）</span>
 <span class="w">        </span><span class="nt">&quot;pDtrail&quot;</span><span class="p">:</span><span class="mf">1.5</span><span class="p">,</span><span class="c1">//出口到尾缘距离系数</span>
-<span class="w">        </span><span class="nt">&quot;file_swn_hub&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot; &quot;</span><span class="p">,</span><span class="c1">//hub边界曲线输入文件</span>
-<span class="w">        </span><span class="nt">&quot;file_swn_tip&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot; &quot;</span><span class="p">,</span><span class="c1">//shourd边界曲线输入文件</span>
-<span class="w">        </span><span class="nt">&quot;file_ps&quot;</span><span class="p">:</span><span class="s2">&quot;./input/T106A_ps.dat&quot;</span><span class="p">,</span><span class="c1">//叶形压力面曲线参数输入文件</span>
-<span class="w">        </span><span class="nt">&quot;file_ss&quot;</span><span class="p">:</span><span class="s2">&quot;./input/T106A_ss.dat&quot;</span><span class="p">,</span><span class="c1">//叶形吸力面曲线参数输入文件</span>
-<span class="w">        </span><span class="nt">&quot;nfile&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="c1">//参数曲线层数</span>
+<span class="w">        </span><span class="nt">&quot;lext_lead&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="c1">//入口延长段距离系数</span>
+<span class="w">        </span><span class="nt">&quot;lext_trail&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="c1">//出口延长段距离系数</span>
+<span class="w">        </span><span class="nt">&quot;design_dimension&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2D&quot;</span><span class="p">,</span><span class="c1">//输入设计参数维度</span>
+<span class="w">        </span><span class="nt">&quot;design_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Work-Producing&quot;</span><span class="p">,</span><span class="c1">//叶片类型</span>
+<span class="w">        </span><span class="nt">&quot;inputformat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;data&quot;</span><span class="p">,</span><span class="c1">//输入文件格式</span>
+<span class="w">        </span><span class="nt">&quot;file_swn_hub&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot; &quot;</span><span class="p">,</span><span class="c1">//机匣曲线下边界几何描述文件</span>
+<span class="w">        </span><span class="nt">&quot;file_swn_tip&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot; &quot;</span><span class="p">,</span><span class="c1">//机匣曲线上边界几何描述文件</span>
+<span class="w">        </span><span class="nt">&quot;file_ps&quot;</span><span class="p">:</span><span class="s2">&quot;T106A_ps.dat&quot;</span><span class="p">,</span><span class="c1">//压力侧曲线几何描述文件</span>
+<span class="w">        </span><span class="nt">&quot;file_ss&quot;</span><span class="p">:</span><span class="s2">&quot;T106A_ss.dat&quot;</span><span class="p">,</span><span class="c1">//吸力侧曲线几何描述文件</span>
+<span class="w">        </span><span class="nt">&quot;nfile&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="c1">//输入几何曲线层数</span>
 <span class="w">        </span><span class="nt">&quot;tub_data&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot; &quot;</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">&quot;blade_name_stack&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">],</span>
 <span class="w">        </span><span class="nt">&quot;blade_type_stack&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">],</span>
 <span class="w">        </span><span class="nt">&quot;nblade&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="c1">//周向叶片数</span>
 <span class="w">        </span><span class="nt">&quot;pitch&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0799</span><span class="p">,</span><span class="c1">//叶片周向间距 </span>
 <span class="w">        </span><span class="nt">&quot;span&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.176</span><span class="p">,</span><span class="c1">//叶片展向高度</span>
+<span class="w">        </span><span class="nt">&quot;tipgap&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="c1">//叶间隙间距</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="nt">&quot;output&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;mesh_output&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;T106A.cgns&quot;</span><span class="p">,</span><span class="c1">//结果文件名</span>
+<span class="w">        </span><span class="nt">&quot;mesh_format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ANSYSmsh&quot;</span><span class="p">,</span><span class="c1">//输出文件格式</span>
+<span class="w">        </span><span class="nt">&quot;mesh_output&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;T106A.msh&quot;</span><span class="c1">//输出文件名</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -402,22 +412,27 @@ ASME Turbo Expo 2000: Power for Land, Sea, and Air, 10.1115/2000-GT-0269</p>
 <tbody>
 <tr>
 <td style="text-align: center;">网格总量</td>
-<td style="text-align: center;">1294432</td>
+<td style="text-align: center;">766782</td>
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td style="text-align: center;">y+</td>
-<td style="text-align: center;">10.0087930602391</td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">ywall</td>
+<td style="text-align: center;">1.0e-5</td>
+<td style="text-align: center;">m</td>
 </tr>
 <tr>
-<td style="text-align: center;">z+</td>
-<td style="text-align: center;">9.99999999999889</td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">zwall</td>
+<td style="text-align: center;">1.0e-4</td>
+<td style="text-align: center;">m</td>
 </tr>
 <tr>
 <td style="text-align: center;">最大纵横比</td>
-<td style="text-align: center;">387.341856031501</td>
+<td style="text-align: center;">800</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">最小偏斜角</td>
+<td style="text-align: center;">51.3808</td>
 <td style="text-align: center;"></td>
 </tr>
 <tr>
@@ -444,21 +459,6 @@ ASME Turbo Expo 2000: Power for Land, Sea, and Air, 10.1115/2000-GT-0269</p>
 <td style="text-align: center;">入口湍流度</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">%</td>
-</tr>
-<tr>
-<td style="text-align: center;">CFL</td>
-<td style="text-align: center;">20</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td style="text-align: center;">SU2求解器</td>
-<td style="text-align: center;">RANS+SST+LM</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td style="text-align: center;">数值格式</td>
-<td style="text-align: center;">ROE+MUSCL+SCALAR_UPWIND</td>
-<td style="text-align: center;"></td>
 </tr>
 </tbody>
 </table>
@@ -490,22 +490,27 @@ EFFECT OF FREE STREAM TURBULENCE INTENSITY, ASME Turbo Expo 2010: Power for Land
 <tbody>
 <tr>
 <td style="text-align: center;">网格总量</td>
-<td style="text-align: center;">913000</td>
+<td style="text-align: center;">1482740</td>
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td style="text-align: center;">y+</td>
-<td style="text-align: center;">10.0184693827385</td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">ywall</td>
+<td style="text-align: center;">1e-6</td>
+<td style="text-align: center;">m</td>
 </tr>
 <tr>
-<td style="text-align: center;">z+</td>
-<td style="text-align: center;">9.99999999999889</td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">zwall</td>
+<td style="text-align: center;">1e-6</td>
+<td style="text-align: center;">m</td>
 </tr>
 <tr>
 <td style="text-align: center;">最大纵横比</td>
-<td style="text-align: center;">382.639363227617</td>
+<td style="text-align: center;">800</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">最小偏斜角</td>
+<td style="text-align: center;">45.8652</td>
 <td style="text-align: center;"></td>
 </tr>
 <tr>
@@ -532,21 +537,6 @@ EFFECT OF FREE STREAM TURBULENCE INTENSITY, ASME Turbo Expo 2010: Power for Land
 <td style="text-align: center;">入口湍流度</td>
 <td style="text-align: center;">0.9</td>
 <td style="text-align: center;">%</td>
-</tr>
-<tr>
-<td style="text-align: center;">CFL</td>
-<td style="text-align: center;">20</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td style="text-align: center;">SU2求解器</td>
-<td style="text-align: center;">RANS+SST+LM</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td style="text-align: center;">数值格式</td>
-<td style="text-align: center;">ROE+MUSCL+SCALAR_UPWIND</td>
-<td style="text-align: center;"></td>
 </tr>
 </tbody>
 </table>
@@ -580,22 +570,27 @@ HIGHLY LOADED TRANSONIC LINEAR TURBINE GUlDE VANE CASCADE, van KARMAN INSTITUTE 
 <tbody>
 <tr>
 <td style="text-align: center;">网格总量</td>
-<td style="text-align: center;">119940</td>
+<td style="text-align: center;">634296</td>
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td style="text-align: center;">y+</td>
-<td style="text-align: center;">1.00611601979317</td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">ywall</td>
+<td style="text-align: center;">5e-5</td>
+<td style="text-align: center;">m</td>
 </tr>
 <tr>
-<td style="text-align: center;">z+</td>
-<td style="text-align: center;">19.9999999999977</td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">zwall</td>
+<td style="text-align: center;">1e-6</td>
+<td style="text-align: center;">m</td>
 </tr>
 <tr>
 <td style="text-align: center;">最大纵横比</td>
-<td style="text-align: center;">241.391616433135</td>
+<td style="text-align: center;">500</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">最小偏斜角</td>
+<td style="text-align: center;">53.2659</td>
 <td style="text-align: center;"></td>
 </tr>
 <tr>
@@ -610,7 +605,7 @@ HIGHLY LOADED TRANSONIC LINEAR TURBINE GUlDE VANE CASCADE, van KARMAN INSTITUTE 
 </tr>
 <tr>
 <td style="text-align: center;">出口静压</td>
-<td style="text-align: center;">84300(MUR45)/88800(MUR47)</td>
+<td style="text-align: center;">83300(MUR45)/87000(MUR47)</td>
 <td style="text-align: center;">Pa</td>
 </tr>
 <tr>
@@ -623,26 +618,11 @@ HIGHLY LOADED TRANSONIC LINEAR TURBINE GUlDE VANE CASCADE, van KARMAN INSTITUTE 
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">%</td>
 </tr>
-<tr>
-<td style="text-align: center;">CFL</td>
-<td style="text-align: center;">10</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td style="text-align: center;">SU2求解器</td>
-<td style="text-align: center;">RANS+SST+LM</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td style="text-align: center;">数值格式</td>
-<td style="text-align: center;">ROE+MUSCL+SCALAR_UPWIND</td>
-<td style="text-align: center;"></td>
-</tr>
 </tbody>
 </table>
 <p><strong>结果图：</strong></p>
 <figure>
-    <img src="../fig/vki-mesh.png" alt="VKI网格" width="100%">
+    <img src="../fig/vki-mesh.png" alt="VKI网格" width="50%">
     <figcaption>图3-1. VKI叶栅计算网格</figcaption>
 </figure>
 <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -677,22 +657,27 @@ High-Pressure-Ratio Core Compressor, NASA Technical Paper 1337</p>
 <tbody>
 <tr>
 <td style="text-align: center;">网格总量</td>
-<td style="text-align: center;">770936</td>
+<td style="text-align: center;">1831892</td>
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td style="text-align: center;">y+</td>
-<td style="text-align: center;">1.00844738006129</td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">ywall</td>
+<td style="text-align: center;">1.0392e-6</td>
+<td style="text-align: center;">m</td>
 </tr>
 <tr>
-<td style="text-align: center;">z+</td>
-<td style="text-align: center;">4.99327435342922</td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">zwall</td>
+<td style="text-align: center;">7.2586e-7</td>
+<td style="text-align: center;">m</td>
 </tr>
 <tr>
 <td style="text-align: center;">最大纵横比</td>
-<td style="text-align: center;">700.34963609152</td>
+<td style="text-align: center;">1227.47</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">最小偏斜角</td>
+<td style="text-align: center;">5.7240</td>
 <td style="text-align: center;"></td>
 </tr>
 <tr>
@@ -707,7 +692,7 @@ High-Pressure-Ratio Core Compressor, NASA Technical Paper 1337</p>
 </tr>
 <tr>
 <td style="text-align: center;">出口静压</td>
-<td style="text-align: center;">113990.625</td>
+<td style="text-align: center;">118000</td>
 <td style="text-align: center;">Pa</td>
 </tr>
 <tr>
@@ -716,18 +701,18 @@ High-Pressure-Ratio Core Compressor, NASA Technical Paper 1337</p>
 <td style="text-align: center;">rad/s</td>
 </tr>
 <tr>
-<td style="text-align: center;">CFL</td>
-<td style="text-align: center;">10</td>
+<td style="text-align: center;">总压比</td>
+<td style="text-align: center;">2.026</td>
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td style="text-align: center;">SU2求解器</td>
-<td style="text-align: center;">RANS+SST+LM</td>
+<td style="text-align: center;">总温比</td>
+<td style="text-align: center;">1.260</td>
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td style="text-align: center;">数值格式</td>
-<td style="text-align: center;">ROE+MUSCL+SCALAR_UPWIND</td>
+<td style="text-align: center;">效率</td>
+<td style="text-align: center;">85.97%</td>
 <td style="text-align: center;"></td>
 </tr>
 </tbody>
@@ -736,7 +721,7 @@ High-Pressure-Ratio Core Compressor, NASA Technical Paper 1337</p>
 <div style="display: flex; justify-content: space-between; align-items: center;">
     <figure style="margin: 1px; flex: 1;">
         <img src="../fig/rotor37-mesh-2.png" alt="Rotor37网格2" width="100%">
-        <figcaption>图4-1. Rotor37计算网格局部放大 </figcaption>
+        <figcaption>图4-1. Rotor37计算网格 </figcaption>
     </figure>
     <figure style="margin: 1px; flex: 1;">
         <img src="../fig/rotor37-mesh.png" alt="Rotor37网格" width="100%">
@@ -747,7 +732,10 @@ High-Pressure-Ratio Core Compressor, NASA Technical Paper 1337</p>
     <img src="../fig/RMa-su2_gap_exp.png" alt="Rotor37rMa" width="100%">
     <figcaption>图4-3. Rotor37 70%高度截面相对马赫数云图（左：实验，右：本案例计算结果）</figcaption>
 </figure>
-
+<figure>
+    <img src="../fig/R37-inout-plt.png" alt="r37inoutmap" width="50%">
+    <figcaption>图4-4. Rotor37 出入口总温总压比曲线</figcaption>
+</figure>
 <h2 id="rotor67">Rotor67</h2>
 <p><strong>案例介绍：</strong> </p>
 <p>Rotor67是NASA Lewis 设计的一款两级风扇的第一级旋翼，其核心设计目标是显著提升风扇的整体性能和效率。它最引人注目的特点是采用了低展弦比，
@@ -769,22 +757,27 @@ Dimensional Flow Field Within a Transonic Fan Rotor: Experiment and Analysis, NA
 <tbody>
 <tr>
 <td style="text-align: center;">网格总量</td>
-<td style="text-align: center;">1331820</td>
+<td style="text-align: center;">2459466</td>
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td style="text-align: center;">y+</td>
-<td style="text-align: center;">1.09007595597836</td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">ywall</td>
+<td style="text-align: center;">1.095E-6</td>
+<td style="text-align: center;">m</td>
 </tr>
 <tr>
-<td style="text-align: center;">z+</td>
-<td style="text-align: center;">4.99555602943846</td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">zwall</td>
+<td style="text-align: center;">6.38E-7</td>
+<td style="text-align: center;">m</td>
 </tr>
 <tr>
 <td style="text-align: center;">最大纵横比</td>
-<td style="text-align: center;">867.23700720102</td>
+<td style="text-align: center;">1532.55</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">最小偏斜角</td>
+<td style="text-align: center;">7.6314</td>
 <td style="text-align: center;"></td>
 </tr>
 <tr>
@@ -799,7 +792,7 @@ Dimensional Flow Field Within a Transonic Fan Rotor: Experiment and Analysis, NA
 </tr>
 <tr>
 <td style="text-align: center;">出口静压</td>
-<td style="text-align: center;">120000</td>
+<td style="text-align: center;">80000</td>
 <td style="text-align: center;">Pa</td>
 </tr>
 <tr>
@@ -808,18 +801,18 @@ Dimensional Flow Field Within a Transonic Fan Rotor: Experiment and Analysis, NA
 <td style="text-align: center;">rad/s</td>
 </tr>
 <tr>
-<td style="text-align: center;">CFL</td>
-<td style="text-align: center;">10</td>
+<td style="text-align: center;">总压比</td>
+<td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td style="text-align: center;">SU2求解器</td>
-<td style="text-align: center;">RANS+SST+LM</td>
+<td style="text-align: center;">总温比</td>
+<td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td style="text-align: center;">数值格式</td>
-<td style="text-align: center;">ROE+MUSCL+SCALAR_UPWIND</td>
+<td style="text-align: center;">效率</td>
+<td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 </tr>
 </tbody>
@@ -867,14 +860,14 @@ Dimensional Flow Field Within a Transonic Fan Rotor: Experiment and Analysis, NA
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td style="text-align: center;">y+</td>
-<td style="text-align: center;">5.37726708344126</td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">ywall</td>
+<td style="text-align: center;">5.377e-5</td>
+<td style="text-align: center;">m</td>
 </tr>
 <tr>
-<td style="text-align: center;">z+</td>
-<td style="text-align: center;">4999.99999999998</td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">zwall</td>
+<td style="text-align: center;">4.999e-2</td>
+<td style="text-align: center;">m</td>
 </tr>
 <tr>
 <td style="text-align: center;">最大纵横比</td>
@@ -910,14 +903,14 @@ Dimensional Flow Field Within a Transonic Fan Rotor: Experiment and Analysis, NA
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td style="text-align: center;">y+</td>
-<td style="text-align: center;">1.00000000000228</td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">ywall</td>
+<td style="text-align: center;">1.0e-5</td>
+<td style="text-align: center;">m</td>
 </tr>
 <tr>
-<td style="text-align: center;">z+</td>
-<td style="text-align: center;">499.999999999989</td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">zwall</td>
+<td style="text-align: center;">4.999e-3</td>
+<td style="text-align: center;">m</td>
 </tr>
 <tr>
 <td style="text-align: center;">最大纵横比</td>
