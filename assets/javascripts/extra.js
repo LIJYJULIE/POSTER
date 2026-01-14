@@ -6,11 +6,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // 2）给首页 body 加 class，用于设置专属背景
-    var path = location.pathname;
+    var path = window.location.pathname || "";
+
+    // 对于这个仓库：
+    //   - GitHub Pages 项目首页： /POSTER/
+    //   - 可能还有 /POSTER/index.html
+    // 本地开发：一般是 / 或 /index.html 或 /index/
     if (
-        path === '/' ||                         // 本地 root
-        /\/index\/?$/.test(path) ||             // 以 /index 或 /index/ 结尾
-        /\/index\.html?$/.test(path)            // 以 /index.html 结尾
+        path === '/' ||                     // 本地根
+        path === '/index.html' ||           // 本地 index.html
+        path === '/index/' ||               // 本地 /index/
+        path === '/POSTER/' ||              // 线上项目首页
+        path === '/POSTER/index.html'       // 线上 /POSTER/index.html
     ) {
         document.body.classList.add('home-background');
     }
