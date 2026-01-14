@@ -57,11 +57,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#acade" class="md-skip">
-          跳转至
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -125,7 +120,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -160,19 +157,6 @@
       
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    ACADE介绍
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="." class="md-nav__link md-nav__link--active">
         
   
@@ -184,41 +168,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#acade" class="md-nav__link">
-    <span class="md-ellipsis">
-      ACADE核心
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#acade-turbo" class="md-nav__link">
-    <span class="md-ellipsis">
-      ACADE-turbo
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -236,7 +185,7 @@
   
   
   <span class="md-ellipsis">
-    高升力装置展示案例
+    飞行器外流场展示案例
     
   </span>
   
@@ -258,7 +207,51 @@
   
   
   <span class="md-ellipsis">
-    叶轮机械展示案例
+    叶轮机械及翼型展示案例
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/LIJYJULIE/Turbo_example" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    算例文件库
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://60.205.112.3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    返回计算任务中心
     
   </span>
   
@@ -281,28 +274,225 @@
               <article class="md-content__inner md-typeset">
                 
                   
+  
+
 
 
 
   <h1>ACADE介绍</h1>
 
-<p>ACADE是什么</p>
-<h2 id="acade">ACADE核心</h2>
-<ul>
-<li><strong>非结构化体网格生成</strong> </li>
-<li><strong>结构化边界层生成</strong> </li>
-<li><strong>网格自适应加密</strong></li>
-<li><strong>EULER/RANS流动仿真计算</strong></li>
-</ul>
-<h2 id="acade-turbo">ACADE-turbo</h2>
-<ul>
-<li><strong>结构化网格生成工具</strong> </li>
-<li><strong>RANS流动仿真计算</strong></li>
-</ul>
-<hr />
-<div class="admonition note">
-<p class="admonition-title">提示</p>
-<p>这个网站是完全静态的，可以轻松部署到任何地方，例如 GitHub Pages。</p>
+<style>
+.md-typeset h1 {
+    display: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 0rem 0 0rem 0;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.0rem;
+    color: #1a1a1a;
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    color: #555;
+    margin-bottom: 0.0rem;
+}
+
+.hero-desc {
+    font-size: 1rem;
+    color: #777;
+}
+
+.module-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+    .module-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.module-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    border: 1px solid #e9ecef;
+    transition: box-shadow 0.2s;
+}
+
+.module-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.module-card h3 {
+    margin-top: 0;
+    color: #1a73e8;
+    font-size: 1.3rem;
+}
+
+.module-tag {
+    display: inline-block;
+    background: #e3f2fd;
+    color: #1565c0;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.module-card p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+}
+
+.module-scope {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.workflow {
+    background: #fafafa;
+    border-radius: 8px;
+    padding: 0.5rem 1.5rem;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.workflow-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.workflow-steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.workflow-step {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.workflow-arrow {
+    color: #999;
+    font-size: 1.2rem;
+}
+
+.workflow-group {
+    margin: 1.5rem 0;
+    padding: 0.5rem;
+    background: #fff;
+    border-radius: 6px;
+    border: 1px solid #eee;
+}
+
+.workflow-label {
+    font-weight: 600;
+    color: #1a73e8;
+    margin-bottom: 0.1rem;
+    font-size: 0.95rem;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 0.7rem 2rem;
+    background: transparent;
+    color: #1a73e8 !important;
+    text-decoration: none;
+    border: 2px solid #1a73e8;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.nav-link:hover {
+    background: #1a73e8;
+    color: #fff !important;
+}
+
+</style>
+
+<div class="hero">
+
+    <div class="hero-title">Automatic CAe driven DEsign</div>
+    <div class="hero-subtitle">流动仿真网格生成与计算工具集</div>
+    <div class="hero-desc">用于透平机械和飞行器流动仿真的网格生成与计算的程序</div>
+</div>
+
+<div class="module-grid">
+    <div class="module-card">
+        <h3>ACADE-Turbo</h3>
+        <span class="module-tag">结构化网格生成</span>
+        <p>基于叶形曲线自动生成高质量结构化流道网格，支持单层拉伸或多层叶形输入，可处理叶尖间隙等复杂几何特征。</p>
+        <div class="module-scope">适用于：翼型分析、涡轮/压气机叶栅、单级透平试验件</div>
+    </div>
+    <div class="module-card">
+        <h3>ACADE</h3>
+        <span class="module-tag">自适应网格仿真</span>
+        <p>基于非结构化网格的外流场求解器，支持网格自适应加密技术，可进行高精度EULER和RANS仿真计算。</p>
+        <div class="module-scope">适用于：翼型、机翼、全机构型、三角翼等外流场分析</div>
+    </div>
+    <div class="module-card">
+        <h3>SU2</h3>
+        <span class="module-tag">通用流动计算</span>
+        <p>基于开源SU2框架改造的流动求解器，可对ACADE-Turbo和ACADE生成的网格进行EULER和RANS流动仿真。</p>
+        <div class="module-scope">适用于：内流场/外流场通用计算</div>
+    </div>
+</div>
+
+<div class="workflow">
+    <div class="workflow-title">工作流程</div>
+    <div class="workflow-group">
+        <div class="workflow-label">ACADE-Turbo + SU2</div>
+        <div class="workflow-steps">
+            <span class="workflow-step">几何输入</span>
+            <span class="workflow-arrow">→</span>
+            <span class="workflow-step">网格生成<br><small>ACADE-Turbo</small></span>
+            <span class="workflow-arrow">→</span>
+            <span class="workflow-step">流动计算与后处理<br><small>SU2</small></span>
+        </div>
+    </div>
+    <div class="workflow-group">
+        <div class="workflow-label">ACADE</div>
+        <div class="workflow-steps">
+            <span class="workflow-step">几何/网格输入</span>
+            <span class="workflow-arrow">→</span>
+            <span class="workflow-step">自适应网格生成 + 流动计算<br><small>ACADE（内置SU2）</small></span>
+        </div>
+    </div>
+</div>
+
+<div class="nav-links">
+    <a href="results-tb/" class="nav-link">透平机械案例</a>
+    <a href="results-hl/" class="nav-link">飞行器案例</a>
 </div>
 
 
@@ -311,8 +501,13 @@
 
 
 
+  
+  
 
 
+
+
+  
 
 
 
@@ -338,11 +533,10 @@
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
+    <div class="md-copyright__highlight">
+      系统版本 v1.0 | © 2025 ALITA Computing Lab. All Rights Reserved.
+    </div>
   
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
   
 </div>
       
@@ -362,6 +556,8 @@
     
     
       <script src="assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="assets/javascripts/extra.js"></script>
       
     
   </body>

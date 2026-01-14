@@ -3,7 +3,9 @@
     max-width: 100%;
     margin: 0;
 }
-
+.md-header__title {
+    display: none;
+}
 /* 调整主要内容区域 */
 .md-main__inner {
     margin: 0;
@@ -56,4 +58,47 @@
     width: 100%;
     justify-content: center;
     display: flex;
+}
+
+/* 底部栏样式 */
+.md-footer {
+    background: #424242;
+}
+
+.md-footer-meta {
+    background: #424242;
+    padding: 0 0;
+}
+
+.md-footer-copyright {
+    color: #fff;
+    font-size: 0.75rem;
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* 外部链接在新标签页打开的图标提示 */
+.md-nav__link[href^="http"]::after {
+    content: " ↗";
+    font-size: 0.8em;
+    opacity: 0.6;
+}
+
+/* 只对首页添加固定背景图 */
+body.home-background {
+    /* extra.css 在 docs/assets/stylesheets/，图片在 docs/1.png，所以是 ../../1.png */
+    background-image: url('../../2.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* 首页内容和侧栏略带白底，让背景能透出一点 */
+body.home-background .md-main,
+body.home-background .md-sidebar {
+    background-color: rgba(255, 255, 255, 0.35);
 }
