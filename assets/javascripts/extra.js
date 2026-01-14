@@ -6,9 +6,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // 2）给首页 body 加 class，用于设置专属背景
-    if (location.pathname === '/' ||
-        location.pathname.endsWith('/index/') ||
-        location.pathname.endsWith('/index.html')) {
+    var path = location.pathname;
+    if (
+        path === '/' ||                         // 本地 root
+        /\/index\/?$/.test(path) ||             // 以 /index 或 /index/ 结尾
+        /\/index\.html?$/.test(path)            // 以 /index.html 结尾
+    ) {
         document.body.classList.add('home-background');
     }
 });

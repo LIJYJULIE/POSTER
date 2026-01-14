@@ -3,8 +3,13 @@
     max-width: 100%;
     margin: 0;
 }
-.md-header__title {
-    display: none;
+.md-header__title,
+.md-header__title .md-header__ellipsis,
+.md-header__title .md-header__topic {
+    display: none !important;
+}
+.md-header__inner .md-header__title {
+    display: none !important;
 }
 /* 调整主要内容区域 */
 .md-main__inner {
