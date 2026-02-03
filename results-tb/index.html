@@ -403,7 +403,6 @@ ASME Turbo Expo 2000: Power for Land, Sea, and Air, 10.1115/2000-GT-0269</p>
 <span class="w">        </span><span class="nt">&quot;scale_factor&quot;</span><span class="p">:</span><span class="mf">0.505</span><span class="p">,</span><span class="c1">//坐标比例变换</span>
 <span class="w">        </span><span class="nt">&quot;cor_fac&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="c1">//O型以外网格整体加粗倍数</span>
 <span class="w">        </span><span class="nt">&quot;refine_fac&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="c1">//网格整体加密倍数</span>
-<span class="w">        </span><span class="nt">&quot;flip&quot;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="c1">//坐标变换</span>
 <span class="w">        </span><span class="nt">&quot;ywall&quot;</span><span class="p">:</span><span class="mf">1.0e-5</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">&quot;zwall&quot;</span><span class="p">:</span><span class="mf">1.0e-4</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">&quot;aspect_ratio&quot;</span><span class="p">:</span><span class="mf">800.0</span><span class="p">,</span>
@@ -411,13 +410,10 @@ ASME Turbo Expo 2000: Power for Land, Sea, and Air, 10.1115/2000-GT-0269</p>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="nt">&quot;geometry&quot;</span><span class="p">:</span><span class="s2">&quot;blade&quot;</span><span class="p">,</span><span class="c1">//叶片类型，blade或wing</span>
-<span class="w">        </span><span class="nt">&quot;nblock&quot;</span><span class="p">:</span><span class="mi">12</span><span class="p">,</span><span class="c1">//网格块数量</span>
-<span class="w">        </span><span class="nt">&quot;dimension&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">],</span><span class="c1">//生成2D/3D网格</span>
-<span class="w">        </span><span class="nt">&quot;use_ext&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="c1">//是否进行HUB网格边界分割</span>
-<span class="w">        </span><span class="nt">&quot;doe&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="c1">//是否DOE批量生成网格</span>
+<span class="w">        </span><span class="nt">&quot;use_ext&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="c1">//对于旋转件，是否使用出入口延长段</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="nt">&quot;gerl&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;use_mode&quot;</span><span class="p">:</span><span class="s2">&quot;relative&quot;</span><span class="p">,</span><span class="c1">//使用绝对坐标或根据xchord归一化</span>
+<span class="w">        </span><span class="nt">&quot;use_mode&quot;</span><span class="p">:</span><span class="s2">&quot;relative&quot;</span><span class="p">,</span><span class="c1">//使用绝对坐标或根据xchord归一化</span>
 <span class="w">        </span><span class="nt">&quot;pDlead&quot;</span><span class="p">:</span><span class="mf">1.5</span><span class="p">,</span><span class="c1">//入口到前缘距离系数（如1.5则延长距离为1.5*叶片弦长投影长度）</span>
 <span class="w">        </span><span class="nt">&quot;pDtrail&quot;</span><span class="p">:</span><span class="mf">1.5</span><span class="p">,</span><span class="c1">//出口到尾缘距离系数</span>
 <span class="w">        </span><span class="nt">&quot;lext_lead&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="c1">//入口延长段距离系数</span>
@@ -430,13 +426,12 @@ ASME Turbo Expo 2000: Power for Land, Sea, and Air, 10.1115/2000-GT-0269</p>
 <span class="w">        </span><span class="nt">&quot;file_ps&quot;</span><span class="p">:</span><span class="s2">&quot;T106A_ps.dat&quot;</span><span class="p">,</span><span class="c1">//压力侧曲线几何描述文件</span>
 <span class="w">        </span><span class="nt">&quot;file_ss&quot;</span><span class="p">:</span><span class="s2">&quot;T106A_ss.dat&quot;</span><span class="p">,</span><span class="c1">//吸力侧曲线几何描述文件</span>
 <span class="w">        </span><span class="nt">&quot;nfile&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="c1">//输入几何曲线层数</span>
-<span class="w">        </span><span class="nt">&quot;tub_data&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot; &quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;blade_name_stack&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">],</span>
-<span class="w">        </span><span class="nt">&quot;blade_type_stack&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">],</span>
 <span class="w">        </span><span class="nt">&quot;nblade&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="c1">//周向叶片数</span>
 <span class="w">        </span><span class="nt">&quot;pitch&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0799</span><span class="p">,</span><span class="c1">//叶片周向间距 </span>
 <span class="w">        </span><span class="nt">&quot;span&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.176</span><span class="p">,</span><span class="c1">//叶片展向高度</span>
 <span class="w">        </span><span class="nt">&quot;tipgap&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="c1">//叶间隙间距</span>
+<span class="w">        </span><span class="nt">&quot;hub_fillet_r&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="c1">//叶根导角圆半径</span>
+<span class="w">        </span><span class="nt">&quot;tip_fillet_r&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="c1">//叶尖导角圆半径，无叶间隙时可用</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="nt">&quot;output&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="nt">&quot;mesh_format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ANSYSmsh&quot;</span><span class="p">,</span><span class="c1">//输出文件格式</span>
