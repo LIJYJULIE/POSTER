@@ -69,7 +69,6 @@ function createLangSwitch() {
 //    zhLink.href = zhPath;
 //    enLink.href = enPath;
 //}
-//此处正确的写法应该为正确检测动态检测基础路径
 function updateLangLinks() {
     var path = window.location.pathname || "";
     var zhLink = document.getElementById('lang-zh');
@@ -79,15 +78,21 @@ function updateLangLinks() {
 
     var zhPath, enPath;
 
-    // 判断当前是中文还是英文页面
     if (path.indexOf('/en/') > -1) {
-        // 当前是英文页面，去掉 /en/ 得到中文路径
+        // 英文页面：去掉 /en/
         zhPath = path.replace('/en/', '/');
         enPath = path;
     } else {
-        // 当前是中文页面，在 /POSTER/ 后插入 en/
+        // 中文页面：在基础路径后插入 en/
         zhPath = path;
-        enPath = path.replace('/POSTER/', '/POSTER/en/');
+        // 检测基础路径：如果路径以 /POSTER/ 开头，基础路径是 /POSTER/，否则是 /
+        if (path.startsWith('/POSTER/')) {
+            enPath = path.replace('/POSTER/', '/POSTER/en/');
+        } else if (path === '/') {
+            enPath = '/en/';
+        } else {
+            enPath = '/en' + path;
+        }
     }
 
     zhLink.href = zhPath;
