@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+Allow: /en/
+Allow: /results-hl/
+Allow: /results-tb/
+Allow: /accounts/login/
+Allow: /accounts/register/
+Allow: /accounts/password-reset/
+Allow: /dashboard/
+
+Disallow: /admin/
+Disallow: /api/
+Disallow: /accounts/api/
+Disallow: /dashboard/api/
+Disallow: /dashboard/delete/
+Disallow: /dashboard/cancel/
+Disallow: /media/
+
+Sitemap: https://www.acadeturbo.com/sitemap.xml

@@ -1,3 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://www.acadeturbo.com/</loc>
+        <lastmod>2026-03-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://www.acadeturbo.com/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.acadeturbo.com/en/"/>
+    </url>
+    <url>
+        <loc>https://www.acadeturbo.com/results-hl/</loc>
+        <lastmod>2026-03-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://www.acadeturbo.com/results-hl/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.acadeturbo.com/en/results-hl/"/>
+    </url>
+    <url>
+        <loc>https://www.acadeturbo.com/results-tb/</loc>
+        <lastmod>2026-03-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://www.acadeturbo.com/results-tb/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.acadeturbo.com/en/results-tb/"/>
+    </url>
+    <url>
+        <loc>https://www.acadeturbo.com/en/</loc>
+        <lastmod>2026-03-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.acadeturbo.com/en/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://www.acadeturbo.com/"/>
+    </url>
+    <url>
+        <loc>https://www.acadeturbo.com/en/results-hl/</loc>
+        <lastmod>2026-03-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.acadeturbo.com/en/results-hl/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://www.acadeturbo.com/results-hl/"/>
+    </url>
+    <url>
+        <loc>https://www.acadeturbo.com/en/results-tb/</loc>
+        <lastmod>2026-03-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.acadeturbo.com/en/results-tb/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://www.acadeturbo.com/results-tb/"/>
+    </url>
 </urlset>

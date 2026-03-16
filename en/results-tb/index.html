@@ -1,0 +1,1164 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Turbomachinery structured mesh generation case demonstrations, supporting Rotor37, Rotor67, T106A/C, VKI LS89 impeller mesh automatic division, automatic structured mesh generation technology, free online CFD calculation.">
+      
+      
+        <meta name="author" content="Julie2025">
+      
+      
+        <link rel="canonical" href="https://www.acadeturbo.com/en/results-tb/">
+      
+      
+        <link rel="prev" href="../results-hl/">
+      
+      
+      
+        
+          <link rel="alternate" href="../../results-tb/" hreflang="zh">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/ACADE.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Turbomachinery and Airfoil Cases - Turbomachinery Structured Mesh Generation | Free Online CFD Calculation - Automatic CAe driven DEsign</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <!-- 百度站点验证 -->
+  <meta name="baidu-site-verification" content="codeva-2hEsPSAvlb" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.acadeturbo.com/en/results-tb/" />
+
+  <!-- 中英文互链 -->
+  
+    <link rel="alternate" hreflang="en" href="https://www.acadeturbo.com/en/results-tb/" />
+    <link rel="alternate" hreflang="zh" href="https://www.acadeturbo.com/results-tb/" />
+  
+
+  <!-- 结构化数据 - 中文首页 -->
+  
+  <!-- 结构化数据 - 英文首页 -->
+  
+  
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#turbomachinery-and-airfoil-demonstration-cases" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../" title="Automatic CAe driven DEsign" class="md-header__button md-logo" aria-label="Automatic CAe driven DEsign" data-md-component="logo">
+      
+  <img src="../../assets/images/ACADE.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Automatic CAe driven DEsign
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Turbomachinery and Airfoil Cases - Turbomachinery Structured Mesh Generation | Free Online CFD Calculation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../results-tb/" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="Automatic CAe driven DEsign" class="md-nav__button md-logo" aria-label="Automatic CAe driven DEsign" data-md-component="logo">
+      
+  <img src="../../assets/images/ACADE.png" alt="logo">
+
+    </a>
+    Automatic CAe driven DEsign
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ACADE Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../results-hl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aircraft External Flow Field Cases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Turbomachinery and Airfoil Cases
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Turbomachinery and Airfoil Cases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#t106a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T106A
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#t106c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T106C
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vki-ls89" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VKI LS89
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rotor37" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rotor37
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rotor67" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rotor67
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#naca0015" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NACA0015
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#n4412" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        N4412
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/LIJYJULIE/Turbo_example" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Example File Library
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.acadeturbo.com/accounts/login/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Back to Computing Center
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="turbomachinery-and-airfoil-demonstration-cases">Turbomachinery and Airfoil Demonstration Cases</h1>
+<p><strong>Official preprint：<a href="https://doi.org/10.5281/zenodo.18932808">10.5281/zenodo.18932808</a></strong></p>
+<p>In the design and optimization of turbomachinery, Computational Fluid Dynamics (CFD) simulation plays a crucial role, and mesh generation, as the foundation of CFD simulation, directly determines the accuracy and reliability of simulation results.
+Therefore, to comprehensively validate and evaluate the performance of our mesh generation tool in the aerospace and turbomachinery fields, while considering the level of detail and open-source availability of data,
+we selected Rotor37, Rotor67, T106A/C, and VKI LS89 as core test cases.
+These cases have been widely adopted as industry-standard benchmarks not only because they cover various typical turbomachinery types and complex operating conditions ranging from transonic compressors to low-pressure turbine cascades and high-pressure turbine blades,
+but more importantly because they encompass complex flow phenomena that pose severe challenges to mesh quality, such as shock waves, separation, transition, tip leakage flow, and secondary flows. Additionally, these cases all have detailed and publicly available experimental data from authoritative institutions such as NASA and VKI,
+providing indispensable and reliable references for accurately evaluating mesh generation quality and validating CFD simulation results.</p>
+<h2 id="t106a">T106A</h2>
+<p><strong>Case Introduction:</strong> </p>
+<p>The T106 airfoil is a representative design of the mid-span section of the rotor blade from the Pratt &amp; Whitney PW2037 engine, which was an optional powerplant for the Boeing 757 aircraft.
+The modern aero-engine design trend is to reduce the number of low-pressure turbine blades to decrease weight and manufacturing costs. This means each blade needs to withstand higher aerodynamic loads, leading to the development of "ultra-high-lift" airfoils like the T106,
+characterized by higher velocity peaks on the suction surface followed by significant diffusion, which makes boundary layer separation and transition phenomena more prominent.</p>
+<p>T106A and T106C are both classic low-pressure turbine cascades, representing lightly-loaded and heavily-loaded operating conditions respectively (the T106A experiments also considered the effects of upstream and downstream wakes).
+Flow in low-pressure turbines is typically characterized by low Reynolds numbers, high angles of attack, and is often accompanied by laminar separation and transition phenomena.
+The distinctive feature of these two cascades is that their suction surfaces are prone to flow separation and laminar-to-turbulent transition. Accurately capturing these phenomena requires high-precision meshes to resolve the boundary layer, especially in separation and reattachment regions.</p>
+<p>Numerous laboratories have conducted detailed experimental tests on the T106 series cascades under various operating conditions, including the von Kármán Institute for Fluid Dynamics (VKI), the University of the Bundeswehr Munich, and the Whittle Laboratory at Cambridge University.</p>
+<p><strong>Data Source:</strong>
+Peter Stadtmüller, Leonhard Fottner, Andreas Fiala, EXPERIMENTAL AND NUMERICAL INVESTIGATION OF WAKE-INDUCED TRANSITION ON A HIGHLY LOADED LP TURBINE AT LOW REYNOLDS NUMBERS, ASME Turbo Expo 2000: Power for Land, Sea, and Air, 10.1115/2000-GT-0269</p>
+<p><strong>Mesh Generation Configuration:</strong> The Case_T106A.json used for computation is as follows</p>
+<p><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;mesh&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;scale_factor&quot;</span><span class="p">:</span><span class="mf">0.505</span><span class="p">,</span><span class="c1">//Coordinate scaling factor</span>
+<span class="w">        </span><span class="nt">&quot;cor_fac&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="c1">//Overall coarsening factor for non-O-type mesh</span>
+<span class="w">        </span><span class="nt">&quot;refine_fac&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="c1">//Overall mesh refinement factor</span>
+<span class="w">        </span><span class="nt">&quot;ywall&quot;</span><span class="p">:</span><span class="mf">1.0e-5</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;zwall&quot;</span><span class="p">:</span><span class="mf">1.0e-4</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;aspect_ratio&quot;</span><span class="p">:</span><span class="mf">800.0</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;outlet_refine&quot;</span><span class="p">:</span><span class="kc">false</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;geometry&quot;</span><span class="p">:</span><span class="s2">&quot;blade&quot;</span><span class="p">,</span><span class="c1">//Blade type: blade or wing</span>
+<span class="w">        </span><span class="nt">&quot;use_ext&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="c1">//For rotating components, whether to use inlet/outlet extensions</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;gerl&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;use_mode&quot;</span><span class="p">:</span><span class="s2">&quot;relative&quot;</span><span class="p">,</span><span class="c1">//Use absolute coordinates or normalize based on xchord</span>
+<span class="w">        </span><span class="nt">&quot;pDlead&quot;</span><span class="p">:</span><span class="mf">1.5</span><span class="p">,</span><span class="c1">//Inlet-to-leading-edge distance coefficient (e.g., 1.5 means extension distance is 1.5 times blade chord projection length)</span>
+<span class="w">        </span><span class="nt">&quot;pDtrail&quot;</span><span class="p">:</span><span class="mf">1.5</span><span class="p">,</span><span class="c1">//Outlet-to-trailing-edge distance coefficient</span>
+<span class="w">        </span><span class="nt">&quot;lext_lead&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="c1">//Inlet extension distance coefficient</span>
+<span class="w">        </span><span class="nt">&quot;lext_trail&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="c1">//Outlet extension distance coefficient</span>
+<span class="w">        </span><span class="nt">&quot;design_dimension&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2D&quot;</span><span class="p">,</span><span class="c1">//Input design parameter dimension</span>
+<span class="w">        </span><span class="nt">&quot;design_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Work-Producing&quot;</span><span class="p">,</span><span class="c1">//Blade type</span>
+<span class="w">        </span><span class="nt">&quot;inputformat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;data&quot;</span><span class="p">,</span><span class="c1">//Input file format</span>
+<span class="w">        </span><span class="nt">&quot;file_swn_hub&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot; &quot;</span><span class="p">,</span><span class="c1">//Geometry description file for hub curve lower boundary</span>
+<span class="w">        </span><span class="nt">&quot;file_swn_tip&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot; &quot;</span><span class="p">,</span><span class="c1">//Geometry description file for shroud curve upper boundary</span>
+<span class="w">        </span><span class="nt">&quot;file_ps&quot;</span><span class="p">:</span><span class="s2">&quot;T106A_ps.dat&quot;</span><span class="p">,</span><span class="c1">//Geometry description file for pressure side curve</span>
+<span class="w">        </span><span class="nt">&quot;file_ss&quot;</span><span class="p">:</span><span class="s2">&quot;T106A_ss.dat&quot;</span><span class="p">,</span><span class="c1">//Geometry description file for suction side curve</span>
+<span class="w">        </span><span class="nt">&quot;nfile&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="c1">//Number of input geometry curve layers</span>
+<span class="w">        </span><span class="nt">&quot;nblade&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="c1">//Number of blades in circumferential direction</span>
+<span class="w">        </span><span class="nt">&quot;pitch&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0799</span><span class="p">,</span><span class="c1">//Blade circumferential pitch</span>
+<span class="w">        </span><span class="nt">&quot;span&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.176</span><span class="p">,</span><span class="c1">//Blade spanwise height</span>
+<span class="w">        </span><span class="nt">&quot;tipgap&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="c1">//Tip clearance gap</span>
+<span class="w">        </span><span class="nt">&quot;hub_fillet_r&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="c1">//Hub fillet radius</span>
+<span class="w">        </span><span class="nt">&quot;tip_fillet_r&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="c1">//Tip fillet radius, applicable when no tip clearance</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;output&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;mesh_format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ANSYSmsh&quot;</span><span class="p">,</span><span class="c1">//Output file format</span>
+<span class="w">        </span><span class="nt">&quot;mesh_output&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;T106A.msh&quot;</span><span class="c1">//Output file name</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<strong>Mesh Information and Computational Configuration:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Parameter</th>
+<th style="text-align: center;">Value</th>
+<th style="text-align: center;">Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Total Mesh Count</td>
+<td style="text-align: center;">766782</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">ywall</td>
+<td style="text-align: center;">1.0e-5</td>
+<td style="text-align: center;">m</td>
+</tr>
+<tr>
+<td style="text-align: center;">zwall</td>
+<td style="text-align: center;">1.0e-4</td>
+<td style="text-align: center;">m</td>
+</tr>
+<tr>
+<td style="text-align: center;">Maximum Aspect Ratio</td>
+<td style="text-align: center;">800</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Minimum Skew Angle</td>
+<td style="text-align: center;">51.3808</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Inlet Total Temperature</td>
+<td style="text-align: center;">300</td>
+<td style="text-align: center;">K</td>
+</tr>
+<tr>
+<td style="text-align: center;">Inlet Total Pressure</td>
+<td style="text-align: center;">24557.9</td>
+<td style="text-align: center;">Pa</td>
+</tr>
+<tr>
+<td style="text-align: center;">Outlet Static Pressure</td>
+<td style="text-align: center;">21994.4</td>
+<td style="text-align: center;">Pa</td>
+</tr>
+<tr>
+<td style="text-align: center;">Inlet Metal Angle</td>
+<td style="text-align: center;">45.5</td>
+<td style="text-align: center;">°</td>
+</tr>
+<tr>
+<td style="text-align: center;">Inlet Turbulence Intensity</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">%</td>
+</tr>
+</tbody>
+</table>
+<p>It is worth noting that in the analysis of numerous experimental and simulation data for T106A, various degrees of correction have been applied to the inlet metal angle. This is because in the T106A steady-state experiments, the upstream wake generator was not removed.
+This effect is not present in T106C.</p>
+<p><strong>Results:</strong></p>
+<figure>
+    <img src="/intro/fig/t106a-mesh.png" alt="T106A Mesh" width="100%">
+    <figcaption>Figure 1-1. T106A Cascade Computational Mesh</figcaption>
+</figure>
+<figure>
+    <img src="/intro/fig/T106A-ma-plt.png" alt="T106Amap" width="50%">
+    <figcaption>Figure 1-2. T106A Isentropic Mach Number Distribution on Blade Surface at 50% Span</figcaption>
+</figure>
+
+<h2 id="t106c">T106C</h2>
+<p><strong>Data Source: </strong>Jan Michálek, Michelangelo Monaldi, Tony Arts, AERODYNAMIC PERFORMANCE OF A VERY HIGH LIFT LOW PRESSURE
+TURBINE AIRFOIL (T106C) AT LOW REYNOLDS AND HIGH MACH NUMBER WITH
+EFFECT OF FREE STREAM TURBULENCE INTENSITY, ASME Turbo Expo 2010: Power for Land, Sea and Air, 10.1115/GT2010-22884</p>
+<p><strong>Mesh Information and Computational Configuration:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Parameter</th>
+<th style="text-align: center;">Value</th>
+<th style="text-align: center;">Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Total Mesh Count</td>
+<td style="text-align: center;">1482740</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">ywall</td>
+<td style="text-align: center;">1e-6</td>
+<td style="text-align: center;">m</td>
+</tr>
+<tr>
+<td style="text-align: center;">zwall</td>
+<td style="text-align: center;">1e-6</td>
+<td style="text-align: center;">m</td>
+</tr>
+<tr>
+<td style="text-align: center;">Maximum Aspect Ratio</td>
+<td style="text-align: center;">800</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Minimum Skew Angle</td>
+<td style="text-align: center;">45.8652</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Inlet Total Temperature</td>
+<td style="text-align: center;">300</td>
+<td style="text-align: center;">K</td>
+</tr>
+<tr>
+<td style="text-align: center;">Inlet Total Pressure</td>
+<td style="text-align: center;">10884.18658</td>
+<td style="text-align: center;">Pa</td>
+</tr>
+<tr>
+<td style="text-align: center;">Outlet Static Pressure</td>
+<td style="text-align: center;">8193.935308</td>
+<td style="text-align: center;">Pa</td>
+</tr>
+<tr>
+<td style="text-align: center;">Inlet Metal Angle</td>
+<td style="text-align: center;">32.7</td>
+<td style="text-align: center;">°</td>
+</tr>
+<tr>
+<td style="text-align: center;">Inlet Turbulence Intensity</td>
+<td style="text-align: center;">0.9</td>
+<td style="text-align: center;">%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Results:</strong></p>
+<figure>
+    <img src="/intro/fig/t106c-mesh.png" alt="T106C Mesh" width="100%">
+    <figcaption>Figure 2-1. T106C Cascade Computational Mesh</figcaption>
+</figure>
+<figure>
+    <img src="/intro/fig/T106C-ma-plt.png" alt="T106Cmap" width="50%">
+    <figcaption>Figure 2-2. T106C Isentropic Mach Number Distribution on Blade Surface at 50% Span</figcaption>
+</figure>
+
+<h2 id="vki-ls89">VKI LS89</h2>
+<p><strong>Case Introduction:</strong> </p>
+<p>LS89 is a high-pressure turbine guide vane designed by the von Kármán Institute for Fluid Dynamics (VKI) in Belgium, renowned for its high-loading characteristics. The flow is typically high-speed, high Reynolds number, and accompanied by significant secondary flow losses, making it a classic case for studying secondary flows (such as horseshoe vortices and passage vortices) and total pressure loss generation mechanisms. These complex three-dimensional flow structures impose high requirements on mesh structure and local refinement strategies, especially for the endwall region meshes. Additionally, under certain operating conditions, LS89 may also exhibit local shock waves, further increasing the complexity of the flow field and mesh.
+VKI has conducted extensive experimental tests on LS89, providing high-quality performance and flow field measurement data, which serves as an important resource for CFD validation.</p>
+<p><strong>Data Source:</strong> T. Arts, M. Lambert de Rouvroit, A.W. Rutherford, AERO-THERMAL INVESTIGATION OF A HIGHLY LOADED TRANSONIC LINEAR TURBINE GUIDE VANE CASCADE, von KARMAN INSTITUTE FOR FLUID DYNAMICS, Technical Note 174</p>
+<p><strong>Mesh Information and Computational Configuration:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Parameter</th>
+<th style="text-align: center;">Value</th>
+<th style="text-align: center;">Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Total Mesh Count</td>
+<td style="text-align: center;">634296</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">ywall</td>
+<td style="text-align: center;">5e-5</td>
+<td style="text-align: center;">m</td>
+</tr>
+<tr>
+<td style="text-align: center;">zwall</td>
+<td style="text-align: center;">1e-6</td>
+<td style="text-align: center;">m</td>
+</tr>
+<tr>
+<td style="text-align: center;">Maximum Aspect Ratio</td>
+<td style="text-align: center;">500</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Minimum Skew Angle</td>
+<td style="text-align: center;">53.2659</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Inlet Total Temperature</td>
+<td style="text-align: center;">420</td>
+<td style="text-align: center;">K</td>
+</tr>
+<tr>
+<td style="text-align: center;">Inlet Total Pressure</td>
+<td style="text-align: center;">159600(MUR45)/147500(MUR47)</td>
+<td style="text-align: center;">Pa</td>
+</tr>
+<tr>
+<td style="text-align: center;">Outlet Static Pressure</td>
+<td style="text-align: center;">83300(MUR45)/87000(MUR47)</td>
+<td style="text-align: center;">Pa</td>
+</tr>
+<tr>
+<td style="text-align: center;">Inlet Metal Angle</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">°</td>
+</tr>
+<tr>
+<td style="text-align: center;">Inlet Turbulence Intensity</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Results:</strong></p>
+<figure>
+    <img src="/intro/fig/vki-mesh.png" alt="VKI Mesh" width="50%">
+    <figcaption>Figure 3-1. VKI Cascade Computational Mesh</figcaption>
+</figure>
+<div style="display: flex; justify-content: space-between; align-items: center;">
+    <figure style="margin: 1px; flex: 1;">
+        <img src="/intro/fig/vki2-ma-plt.png" alt="VKI2map" width="100%">
+        <figcaption>Figure 3-2. Case MUR45: VKI Isentropic Mach Number Distribution on Blade Surface at 50% Span</figcaption>
+    </figure>
+    <figure style="margin: 1px; flex: 1;">
+        <img src="/intro/fig/vki1-ma-plt.png" alt="VKI1map" width="100%">
+        <figcaption>Figure 3-3. Case MUR47: VKI Isentropic Mach Number Distribution on Blade Surface at 50% Span</figcaption>
+    </figure>
+</div>
+
+<h2 id="rotor37">Rotor37</h2>
+<p><strong>Case Introduction:</strong></p>
+<p>Rotor37 and Rotor67 are both classic transonic axial compressor rotors designed and tested by NASA, widely used for studying complex phenomena such as high Mach number flows, shock-boundary layer interactions, tip clearance flows, and near-stall operating conditions.</p>
+<p>Rotor37 was designed and built by NASA Glenn Research Center, with design objectives of achieving high efficiency and high pressure ratio. It was specifically designed to study the behavior of transonic flow in compressor blades, aiming to provide a foundation for more efficient aero-engine compressor designs.
+Rotor37 exhibits transonic flow at its design point and throughout most of its operating range. As a single-stage rotor, Rotor37 is capable of producing a relatively high total pressure ratio, which is an important indicator for compressor performance.</p>
+<p><strong>Data Source:</strong> Lonnie Reid and Royce D. Moore, Design and Overall Performance of Four Highly Loaded, High-Speed Inlet Stages for an Advanced High-Pressure-Ratio Core Compressor, NASA Technical Paper 1337</p>
+<p><strong>Mesh Information and Computational Configuration:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Parameter</th>
+<th style="text-align: center;">Value</th>
+<th style="text-align: center;">Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Total Mesh Count</td>
+<td style="text-align: center;">1831892</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">ywall</td>
+<td style="text-align: center;">1.0392e-6</td>
+<td style="text-align: center;">m</td>
+</tr>
+<tr>
+<td style="text-align: center;">zwall</td>
+<td style="text-align: center;">7.2586e-7</td>
+<td style="text-align: center;">m</td>
+</tr>
+<tr>
+<td style="text-align: center;">Maximum Aspect Ratio</td>
+<td style="text-align: center;">1227.47</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Minimum Skew Angle</td>
+<td style="text-align: center;">5.7240</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Inlet Total Temperature</td>
+<td style="text-align: center;">288.15</td>
+<td style="text-align: center;">K</td>
+</tr>
+<tr>
+<td style="text-align: center;">Inlet Total Pressure</td>
+<td style="text-align: center;">101325</td>
+<td style="text-align: center;">Pa</td>
+</tr>
+<tr>
+<td style="text-align: center;">Outlet Static Pressure</td>
+<td style="text-align: center;">118000</td>
+<td style="text-align: center;">Pa</td>
+</tr>
+<tr>
+<td style="text-align: center;">Rotational Speed</td>
+<td style="text-align: center;">(0,0,-1799.8519)</td>
+<td style="text-align: center;">rad/s</td>
+</tr>
+<tr>
+<td style="text-align: center;">Total Pressure Ratio</td>
+<td style="text-align: center;">2.026</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Total Temperature Ratio</td>
+<td style="text-align: center;">1.260</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Outlet Mass Flow Rate</td>
+<td style="text-align: center;">20.721</td>
+<td style="text-align: center;">kg/s</td>
+</tr>
+<tr>
+<td style="text-align: center;">Efficiency</td>
+<td style="text-align: center;">85.97%</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Results:</strong></p>
+<div style="display: flex; justify-content: space-between; align-items: center;">
+    <figure style="margin: 1px; flex: 1;">
+        <img src="/intro/fig/rotor37-mesh-2.png" alt="Rotor37 Mesh 2" width="100%">
+        <figcaption>Figure 4-1. Rotor37 Computational Mesh</figcaption>
+    </figure>
+    <figure style="margin: 1px; flex: 1;">
+        <img src="/intro/fig/rotor37-mesh.png" alt="Rotor37 Mesh" width="100%">
+        <figcaption>Figure 4-2. Rotor37 Computational Mesh</figcaption>
+    </figure>
+</div>
+<figure>
+    <img src="/intro/fig/RMa-su2_gap_exp.png" alt="Rotor37rMa" width="100%">
+    <figcaption>Figure 4-3. Rotor37 Relative Mach Number Contour at 70% Span (Left: Experiment, Right: Present Simulation Results)</figcaption>
+</figure>
+<figure>
+    <img src="/intro/fig/R37-inout-plt.png" alt="r37inoutmap" width="50%">
+    <figcaption>Figure 4-4. Rotor37 Inlet-Outlet Total Temperature and Total Pressure Ratio Distribution</figcaption>
+</figure>
+
+<h2 id="rotor67">Rotor67</h2>
+<p><strong>Case Introduction:</strong> </p>
+<p>Rotor67 is the first-stage rotor of a two-stage fan designed by NASA Lewis, with the core design objective of significantly improving overall fan performance and efficiency. Its most notable feature is the adoption of a low aspect ratio, aimed at eliminating the mid-span dampers traditionally required in turbomachinery fans to suppress blade vibration and improve aerodynamic stability, thereby simplifying the structure and reducing aerodynamic losses. Experimental results demonstrated that it achieved efficiency exceeding expectations at the design pressure ratio, with the first-stage rotor achieving an adiabatic efficiency of 0.906, which is 2 percentage points higher than the design target. Additionally, the optimized radial load distribution also enables the fan to better handle boundary layer defects in the tip region, further enhancing overall performance.
+Rotor67 consists of 22 multiple-circular-arc blades, designed for axial inlet flow without requiring inlet guide vanes.
+M. J. Pierzga et al. obtained laser velocimeter and aerodynamic performance data for this design under operating conditions near peak efficiency and near stall, which can be used for comparative analysis with simulation calculations.</p>
+<p><strong>Data Source:</strong> M. J. Pierzga, J.R. Wood, Investigation of the Three-Dimensional Flow Field Within a Transonic Fan Rotor: Experiment and Analysis, NASA Technical Memorandum 83739</p>
+<p><strong>Mesh Information and Computational Configuration:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Parameter</th>
+<th style="text-align: center;">Value</th>
+<th style="text-align: center;">Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Total Mesh Count</td>
+<td style="text-align: center;">2459466</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">ywall</td>
+<td style="text-align: center;">1.095E-6</td>
+<td style="text-align: center;">m</td>
+</tr>
+<tr>
+<td style="text-align: center;">zwall</td>
+<td style="text-align: center;">6.38E-7</td>
+<td style="text-align: center;">m</td>
+</tr>
+<tr>
+<td style="text-align: center;">Maximum Aspect Ratio</td>
+<td style="text-align: center;">1532.55</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Minimum Skew Angle</td>
+<td style="text-align: center;">7.6314</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Inlet Total Temperature</td>
+<td style="text-align: center;">300</td>
+<td style="text-align: center;">K</td>
+</tr>
+<tr>
+<td style="text-align: center;">Inlet Total Pressure</td>
+<td style="text-align: center;">101325</td>
+<td style="text-align: center;">Pa</td>
+</tr>
+<tr>
+<td style="text-align: center;">Outlet Static Pressure</td>
+<td style="text-align: center;">120000</td>
+<td style="text-align: center;">Pa</td>
+</tr>
+<tr>
+<td style="text-align: center;">Rotational Speed</td>
+<td style="text-align: center;">(0,0,-1679.98)</td>
+<td style="text-align: center;">rad/s</td>
+</tr>
+<tr>
+<td style="text-align: center;">Total Pressure Ratio</td>
+<td style="text-align: center;">1.561</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Total Temperature Ratio</td>
+<td style="text-align: center;">1.152</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Outlet Mass Flow Rate</td>
+<td style="text-align: center;">34.446566</td>
+<td style="text-align: center;">kg/s</td>
+</tr>
+<tr>
+<td style="text-align: center;">Efficiency</td>
+<td style="text-align: center;">89.10%</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Results:</strong></p>
+<div style="display: flex; justify-content: space-between; align-items: center;">
+    <figure style="margin: 1px; flex: 1;">
+        <img src="/intro/fig/rotor67-mesh-2.png" alt="Rotor67 Mesh 2" width="100%">
+        <figcaption>Figure 5-1. Rotor67 Computational Mesh (Zoomed View)</figcaption>
+    </figure>
+    <figure style="margin: 1px; flex: 1;">
+        <img src="/intro/fig/rotor67-mesh.png" alt="Rotor67 Mesh" width="100%">
+        <figcaption>Figure 5-2. Rotor67 Computational Mesh</figcaption>
+    </figure>
+</div>
+<figure>
+    <img src="/intro/fig/rotor67-ma.png" alt="Rotor67 Mach Number Distribution" width="100%">
+    <figcaption>Figure 5-3. Rotor67 Mach Number Contour at 50% Span</figcaption>
+</figure>
+
+<h2 id="naca0015">NACA0015</h2>
+<p><strong>Case Introduction:</strong></p>
+<p>NACA0015 is a perfectly symmetric airfoil with a maximum thickness of 15% of the chord length.
+Although it is a very basic airfoil, in certain applications, particularly where lift generation in both forward and reverse directions is required, such as helicopter rotor pitch-varying blades, symmetric airfoils may be an appropriate choice.
+Additionally, due to the need to maintain control capability at high angles of attack and typically not requiring lift generation at zero angle of attack, NACA0015 or its variants are commonly used for aircraft vertical tails and horizontal tails (straight wing profiles).</p>
+<p><strong>Results:</strong></p>
+<figure>
+    <img src="/intro/fig/naca0015-mesh.png" alt="NACA0015 Mesh" width="50%">
+    <figcaption>Figure 6. NACA0015 Airfoil Computational Mesh</figcaption>
+</figure>
+
+<p><strong>Mesh Information:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Parameter</th>
+<th style="text-align: center;">Value</th>
+<th style="text-align: center;">Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Total Mesh Count</td>
+<td style="text-align: center;">137160</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">ywall</td>
+<td style="text-align: center;">5.377e-5</td>
+<td style="text-align: center;">m</td>
+</tr>
+<tr>
+<td style="text-align: center;">zwall</td>
+<td style="text-align: center;">4.999e-2</td>
+<td style="text-align: center;">m</td>
+</tr>
+<tr>
+<td style="text-align: center;">Maximum Aspect Ratio</td>
+<td style="text-align: center;">3715.02301450229</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="n4412">N4412</h2>
+<p><strong>Case Introduction:</strong></p>
+<p>N4412 is also a very common NACA four-digit series airfoil with camber, which means it can generate lift at zero angle of attack.
+It is one of the preferred airfoils for many small general aviation aircraft wings because it provides sufficient lift at low speeds while also considering structural and manufacturing simplicity.
+When designing low to medium speed unmanned aerial vehicles, N4412 or its variants are often considered to achieve favorable lift-to-drag ratios.</p>
+<p><strong>Results:</strong></p>
+<figure>
+    <img src="/intro/fig/n4412-mesh.png" alt="N4412 Mesh" width="50%">
+    <figcaption>Figure 7. NACA4412 Airfoil Computational Mesh</figcaption>
+</figure>
+
+<p><strong>Mesh Information:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Parameter</th>
+<th style="text-align: center;">Value</th>
+<th style="text-align: center;">Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Total Mesh Count</td>
+<td style="text-align: center;">211608</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">ywall</td>
+<td style="text-align: center;">1.0e-5</td>
+<td style="text-align: center;">m</td>
+</tr>
+<tr>
+<td style="text-align: center;">zwall</td>
+<td style="text-align: center;">4.999e-3</td>
+<td style="text-align: center;">m</td>
+</tr>
+<tr>
+<td style="text-align: center;">Maximum Aspect Ratio</td>
+<td style="text-align: center;">3598.23560215619</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      System Version v1.0 | © 2026 CLTech. All Rights Reserved. <a href="https://beian.miit.gov.cn/" target="_blank">沪ICP备2026006576号</a> | 沪公网安备31010602009750号
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "toc.integrate", "navigation.top"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../assets/javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

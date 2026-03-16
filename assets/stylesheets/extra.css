@@ -95,7 +95,7 @@
 /* 只对首页添加固定背景图 */
 body.home-background {
     /* extra.css 在 docs/assets/stylesheets/，图片在 docs/1.png，所以是 ../../1.png */
-    background-image: url('../../2.png');
+    background-image: url('../images/2.png');
     background-attachment: fixed;
     background-size: cover;
     background-position: center center;
@@ -106,4 +106,50 @@ body.home-background {
 body.home-background .md-main,
 body.home-background .md-sidebar {
     background-color: rgba(255, 255, 255, 0.35);
+}
+/* 隐藏插件自带的语言切换器 */
+.md-header__option {
+    display: none !important;
+}
+/* 自定义语言切换按钮 */
+#custom-lang-switch {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    font-weight: 600;
+    z-index: 100;
+}
+
+#custom-lang-switch a {
+    color: #666;
+    text-decoration: none;
+    padding: 4px 6px;
+}
+
+#custom-lang-switch a:hover {
+    color: #1976d2;
+}
+
+#custom-lang-switch a.active {
+    color: #1976d2;
+}
+
+#custom-lang-switch span {
+    color: #999;
+}
+
+
+/* 段落两端对齐 */
+p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* 可选：改善英文两端对齐的断词效果 */
+p {
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
 }
