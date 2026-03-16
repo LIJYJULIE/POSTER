@@ -17,7 +17,9 @@ function initPage() {
         path === '/POSTER/' ||
         path === '/POSTER/index.html' ||
         path === '/en/' ||
-        path === '/en/index.html'
+        path === '/en/index.html' ||
+        path === '/POSTER/en/' ||
+        path === '/POSTER/en/index.html'
     ) {
         document.body.classList.add('home-background');
     }
@@ -46,29 +48,6 @@ function createLangSwitch() {
 //    updateLangSwitch();
 }
 
-//function updateLangLinks() {
-//    var path = window.location.pathname || "";
-//    var zhLink = document.getElementById('lang-zh');
-//    var enLink = document.getElementById('lang-en');
-//
-//    if (!zhLink || !enLink) return;
-//
-//    var zhPath, enPath;
-//
-//    // 判断当前是中文还是英文页面
-//    if (path.indexOf('/en/') > -1) {
-//        // 当前是英文页面，去掉 /en/ 得到中文路径
-//        zhPath = path.replace('/en/', '/');
-//        enPath = path;
-//    } else {
-//        // 当前是中文页面，加上 /en/ 得到英文路径
-//        zhPath = path;
-//        enPath = '/en/' + path.substring(1);
-//    }
-//
-//    zhLink.href = zhPath;
-//    enLink.href = enPath;
-//}
 function updateLangLinks() {
     var path = window.location.pathname || "";
     var zhLink = document.getElementById('lang-zh');
