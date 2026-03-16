@@ -69,7 +69,7 @@ function createLangSwitch() {
 //    zhLink.href = zhPath;
 //    enLink.href = enPath;
 //}
-此处正确的写法应该为正确检测动态检测基础路径
+//此处正确的写法应该为正确检测动态检测基础路径
 function updateLangLinks() {
     var path = window.location.pathname || "";
     var zhLink = document.getElementById('lang-zh');
