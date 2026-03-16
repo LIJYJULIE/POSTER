@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-        <loc>https://lijyjulie.github.io/POSTER/</loc>
+        <loc>None./</loc>
         <lastmod>2026-03-16</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://lijyjulie.github.io/POSTER/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://lijyjulie.github.io/POSTER/en/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="None"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/"/>
     </url>
     <url>
-        <loc>https://lijyjulie.github.io/POSTER/results-hl/</loc>
+        <loc>Noneresults-hl/</loc>
         <lastmod>2026-03-16</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://lijyjulie.github.io/POSTER/results-hl/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://lijyjulie.github.io/POSTER/en/results-hl/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="Noneresults-hl/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/results-hl/"/>
     </url>
     <url>
-        <loc>https://lijyjulie.github.io/POSTER/results-tb/</loc>
+        <loc>Noneresults-tb/</loc>
         <lastmod>2026-03-16</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://lijyjulie.github.io/POSTER/results-tb/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://lijyjulie.github.io/POSTER/en/results-tb/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="Noneresults-tb/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/results-tb/"/>
     </url>
     <url>
-        <loc>https://lijyjulie.github.io/POSTER/en/</loc>
+        <loc>Noneen/</loc>
         <lastmod>2026-03-16</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://lijyjulie.github.io/POSTER/en/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://lijyjulie.github.io/POSTER/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="None"/>
     </url>
     <url>
-        <loc>https://lijyjulie.github.io/POSTER/en/results-hl/</loc>
+        <loc>Noneen/results-hl/</loc>
         <lastmod>2026-03-16</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://lijyjulie.github.io/POSTER/en/results-hl/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://lijyjulie.github.io/POSTER/results-hl/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/results-hl/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="Noneresults-hl/"/>
     </url>
     <url>
-        <loc>https://lijyjulie.github.io/POSTER/en/results-tb/</loc>
+        <loc>Noneen/results-tb/</loc>
         <lastmod>2026-03-16</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://lijyjulie.github.io/POSTER/en/results-tb/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://lijyjulie.github.io/POSTER/results-tb/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/results-tb/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="Noneresults-tb/"/>
     </url>
 </urlset>
