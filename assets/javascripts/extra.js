@@ -30,7 +30,7 @@ function createLangSwitch() {
     // 如果已经存在就更新链接
     if (document.getElementById('custom-lang-switch')) {
         updateLangLinks();
-        updateLangSwitch();
+//        updateLangSwitch();
         return;
     }
 
@@ -43,7 +43,7 @@ function createLangSwitch() {
 
     header.appendChild(langSwitch);
     updateLangLinks();
-    updateLangSwitch();
+//    updateLangSwitch();
 }
 
 //function updateLangLinks() {
@@ -69,7 +69,7 @@ function createLangSwitch() {
 //    zhLink.href = zhPath;
 //    enLink.href = enPath;
 //}
-
+此处正确的写法应该为正确检测动态检测基础路径
 function updateLangLinks() {
     var path = window.location.pathname || "";
     var zhLink = document.getElementById('lang-zh');
