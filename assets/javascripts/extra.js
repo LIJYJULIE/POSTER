@@ -46,6 +46,30 @@ function createLangSwitch() {
     updateLangSwitch();
 }
 
+//function updateLangLinks() {
+//    var path = window.location.pathname || "";
+//    var zhLink = document.getElementById('lang-zh');
+//    var enLink = document.getElementById('lang-en');
+//
+//    if (!zhLink || !enLink) return;
+//
+//    var zhPath, enPath;
+//
+//    // 判断当前是中文还是英文页面
+//    if (path.indexOf('/en/') > -1) {
+//        // 当前是英文页面，去掉 /en/ 得到中文路径
+//        zhPath = path.replace('/en/', '/');
+//        enPath = path;
+//    } else {
+//        // 当前是中文页面，加上 /en/ 得到英文路径
+//        zhPath = path;
+//        enPath = '/en/' + path.substring(1);
+//    }
+//
+//    zhLink.href = zhPath;
+//    enLink.href = enPath;
+//}
+
 function updateLangLinks() {
     var path = window.location.pathname || "";
     var zhLink = document.getElementById('lang-zh');
@@ -61,15 +85,14 @@ function updateLangLinks() {
         zhPath = path.replace('/en/', '/');
         enPath = path;
     } else {
-        // 当前是中文页面，加上 /en/ 得到英文路径
+        // 当前是中文页面，在 /POSTER/ 后插入 en/
         zhPath = path;
-        enPath = '/en/' + path.substring(1);
+        enPath = path.replace('/POSTER/', '/POSTER/en/');
     }
 
     zhLink.href = zhPath;
     enLink.href = enPath;
 }
-
 // 首次加载
 document.addEventListener('DOMContentLoaded', initPage);
 
